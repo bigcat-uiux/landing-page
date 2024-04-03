@@ -95,38 +95,31 @@ function openSearchRankResultPopup(indx) {
   // $('.popup-search-rank-result .popup-content .rank-result').text(indx+1);
   $("body").addClass("popup-active");
   $(".popup-search-rank-result").addClass("active");
-  Papa.parse("assets/csv/un.csv", {
+  Papa.parse(`assets/csv/${lang.toUpperCase()}.csv`, {
     header: true,
     download: true,
     dynamicTyping: true,
     complete: function (results) {
-      $.get(
-        "https://ipinfo.io",
-        function (response) {
-          var tbodyHTML = "";
-          var counter = 0;
+      var tbodyHTML = "";
 
-          results.data.forEach(function (row, index) {
-            if (index == indx) {
-              console.log(row.prize);
-              $(".popup-search-rank-result .popup-content .rank-result").text(
-                row.prize
-              );
-            }
-          });
-          $(".ledger tbody").html(tbodyHTML);
-          var unBoxMaxWidth = Math.max.apply(
-            Math,
-            $(".un-box")
-              .map(function () {
-                return $(this).width();
-              })
-              .get()
+      results.data.forEach(function (row, index) {
+        if (index == indx) {
+          console.log(row.prize);
+          $(".popup-search-rank-result .popup-content .rank-result").text(
+            row.prize
           );
-          $(".un-box").width(unBoxMaxWidth);
-        },
-        "jsonp"
+        }
+      });
+      $(".ledger tbody").html(tbodyHTML);
+      var unBoxMaxWidth = Math.max.apply(
+        Math,
+        $(".un-box")
+          .map(function () {
+            return $(this).width();
+          })
+          .get()
       );
+      $(".un-box").width(unBoxMaxWidth);
     },
   });
 }
@@ -189,12 +182,11 @@ if (
   }
 }
 
-Papa.parse(`assets/csv/un-${lang.toUpperCase()}.csv`, {
+Papa.parse(`assets/csv/${lang.toUpperCase()}.csv`, {
   header: true,
   download: true,
   dynamicTyping: true,
   complete: function (results) {
-    console.log(path.toString());
     var tbodyHTML = "";
     var counter = 0;
     results.data.forEach(function (row) {

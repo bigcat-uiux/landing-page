@@ -1,472 +1,737 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>M88</title>
-<meta charset="utf-8" />
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
-<link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-1.4.1.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.plugin.min.js"></script>
-<!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
-<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
-<script type="text/javascript" src="assets/js/papaparse.min.js"></script>
-</head>
-<body>
-<header id="header" onclick="hid__grp()">
-	<div class="inner-box">
-		<div class="row">
-			<div class="col col-1">
-				<a href="index.html">
-					<picture>
-					   <source srcset="assets/images/mlogo-mobile.svg" media="(max-width: 767px)">
-					   <source srcset="assets/images/mlogo-desktop.svg" media="(min-width: 768px)">
-					   <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
-					</picture>
-				</a>
-			</div>
-			<div class="col col-2">
-				<a class="btn" role="button" onclick="openSearchRankPopup();">ตั๋วของฉัน</a>
-				<div class="header__langs">
-					<div class="sel-lang"><img src="assets/images/flags/th.svg"><small class="langs">ไทย</small><span></span></div>
-					<ul>
-						<li class="option-hover"><img src="assets/images/flags/en.svg"><span class="spc-sm">English</span></li>
-						<div class="cn-label">
-							<div class="option-block">
-								<a href="index.html">Malaysian Ringgit<br><small>(MYR)</small></a>
-								<a href="index-inr.html">Indian Rupee <small>(INR)</small></a>
-							</div>
-						</div>
-						<li class="option-hover"><img src="assets/images/flags/cn.svg"><span class="spc-sm">简体中文</span></li>
-						<div class="cn-label">
-							<div class="option-block">
-								<a href="index-cn.html">Chinese Yuan <small>(CNY)</small></a>
-								<a href="index-mycn.html">Malaysian Ringgit <br><small>(MYR)</small></a>
-							</div>
-						</div>
-						<li><a href="index-th.html"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
-						<li><a href="index-id.html"><img src="assets/images/flags/id.svg"><span>Bhs Indonesia <small>(IDR)</small></span></a></li>
-						<li><a href="index-vn.html"><img src="assets/images/flags/vn.svg"><span>Tiếng Việt <small>(VND)</small></span></a></li>
-						<li><a href="index-kr.html"><img src="assets/images/flags/kr.svg"><span>Korean <small>(KRW)</small></span></a></li>
-						<li><a href="index-jp.html"><img class="jpflag" src="assets/images/flags/jpy.svg"><span>Japanese <small>(USD)</small></span></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-<div id="main" onclick="hid__grp()">
-	<div class="container">
-		<div class="coins">
-			<img class="coins-desk" src="assets/images/coins.png">
-			<img class="coins-mobi" src="assets/images/coins-mobi.png">
-		</div>
-		<div class="timer-container"></div>
-		<div class="inner-box inner-box-ledger">
-			<table class="ledger">
-				<caption>
-					<div class="row">
-						<div class="col col-1">
-							<div class="row"><span class="col col-1">อีสปอร์ตแจกรางวัลทุกเดือน</span></div>
-							<!-- <div class="row"><span class="col loi-krathong">ศึกแดงเดือด BANGKOK CENTURY CUP 2022</span></div> -->
-							<span class="line"></span>
-						</div>
-					</div>
-					<div class="col col-3">
-						<div class="promo-timer">
-							<span class="timer-label">ระยะเวลาโปรโมชั่น</span>
-							<div class="countdown">
-								<div class="num-row">
-									<div class="num-col col-days">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-									<div class="num-col col-hour">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-									<div class="num-col col-min">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-									<div class="num-col col-sec">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</caption>
-				<thead>
-					<tr>
-						<th><span>อันดับ</span></th>
-						<th style="text-align: center;"><span>ชื่อผู้ใช้</span></th>
-						<th style="text-align: right;"><span>คะแนนสะสม</span></th>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</div>
-		<div class="wrap-show-more"><a role="button" class="btn-show-more"><strong data-less="SEE LESS">SEE MORE</strong></a></div>
-		<div class="inner-box">
-			<div class="accordion-box area-tnc">
-				<div class="accordion-parent"><strong><span>ข้อกำหนดและเงื่อนไข</span></strong></div>
-				<div class="accordion-content">
-					<ol>
-						<li>โปรโมชั่นนี้สำหรับสมาชิกทั้งหมดที่อยู่ใน  M88
-							<table>
-								<thead>
-									<tr>
-										<th>ระยะเวลาโปรโมชั่น (GMT+8)  </th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>01 มีนาคม 2566 เวลา 00:00:00 น. – 31 ธันวาคม 2566 เวลา 23:59:59 น. </td>
-									</tr>
-								</tbody>
-							</table>
-						</li>																		
-						<li>ในช่วงระยะเวลาโปรโมชั่น สมาชิกที่เล่นใน "อีสปอร์ต" จะมีโอกาสลุ้นตั๋วสุุ่มรางวัลและชนะรางวัลสุดเอ็กซ์คลูซีฟทุกเดือน ตามรายละเอียดด้านล่าง										
-							<table>
-								<thead>
-									<tr>
-										<th rowspan="2">จำนวนผู้ชนะ</th>
-										<th rowspan="2">รางวัล</th>
-										<th>แลกฟรีเดิมพัน (บาท)</th>
-									</tr>
-									<tr>
-										<th>ทำเทิร์น 1 เท่า</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>12GB GRAPHICS CARD (การ์ดจอ) - RTX 3060 </td>
-										<td>7,200</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>โอกาสเล่นเกม DOTA 2 กับทีม TALON  </td>
-										<td>4,000</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>หูฟังไร้สาย STEELSERIES ARCTIS 1</td>
-										<td>1,600</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>STEAM GIFT CARD $50 </td>
-										<td>800</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>เสื้อทีม TALON</td>
-										<td>320</td>
-									</tr>
-									<tr>
-										<td>11</td>
-										<td>$10 GIFT CARD (STEAM/RIOT/GARENA) </td>
-										<td>160</td>
-									</tr>
-								</tbody>
-							</table>												
-						**ตั๋วสุ่มจะทำการปรับให้สมาชิกในวันถัดไป เวลาโดยประมาณ เที่ยงวันเป็นต้นไป (GMT+8)<br><br>									
-						สมาชิกจะได้รับตั๋วสุ่มได้อย่างไร:
-							<ul>
-								<li>ทุกๆ ยอดฝากขั้นต่ำ 320 บาท/รายการ จะได้รับ 1 ตั๋ว</li>									
-								<li>ทุกๆ ยอดเดิมพัน 160 บาทในอีสปอร์ต จะได้รับ 1 ตั๋ว</li>								
-								<li>ทุกๆ ยอดเดิมพัน 160 บาท ในผลิตภัณฑ์อื่นๆ ของ M88 จะได้รับ 1 ตั๋ว	</li>								
-								<li>ทุกการแนะนำเพื่อน (ที่สมัครสมาชิกใหม่เท่านั้น) จะได้รับ 5 ตั๋ว </li>
-							</ul>									
-						</li>							
-						<li>สมาชิกจะต้องคลิกปุ่ม "เข้าร่วม" (หลังจากเข้าสู่ระบบ) เพื่อเข้าร่วมโปรโมชั่น โบนัสจะไม่สามารถปรับย้อนหลังได้ ในกรณีที่สมาชิกไม่กดเข้าร่วมในช่วงเวลาโปรโมชั่นที่กำหนด		</li>								
-						<li>เฉพาะการเดิมพันที่ใช้เงินจริงเท่านั้น ที่จะนำมาคำนวณในโปรโมชั่นนี้ รายการเดิมพันที่โมฆะ ยกเลิก และการเดิมพันใน เกมส์ที่ไม่เข้าร่วม จะไม่สามารถนำมาคำนวณในยอดเดิมพันรวม และ/หรือ ยอดเดิมพันหมุนเวียนได้ (เมื่อตรงตามเงื่อนไข)</li>								
-						<li>ของรางวัลที่แลกเปลี่ยนเป็นฟรีเดิมพัน สมาชิกจะต้องทำยอดเดิมพันหมุนเวียน  1 เท่า ใน "อีสปอร์ต" ก่อนทำรายการถอน</li>										
-						<li>โบนัส จะทำการปรับเข้ากระเป๋าเงินของสมาชิกอัตโนมัติ ภายใน 5 วันทำการ หลังจากโปรโมชั่นสิ้นสุดลง หากไม่มีการใช้งาน โบนัสที่ได้รับจะหมดอายุภายใน 5 วันหลังจากวันที่ได้รับโบนัส	</li>									
-						<li>สมาชิกจะได้รับการติดต่อเพื่อรับของรางวัลภายใน 5 วันหลังจากโปรโมชั่นสิ้นสุดลง หากไม่สามารถติดต่อได้ รางวัลจะถือเป็นโมฆะ	</li>									
-						<li>สมาชิกจะต้องทำยอดเดิมพันหมุนเวียนให้สำเร็จภายใน 7 วันหลังจากได้รับโบนัส หากเกินระยะเวลาที่กำหนด ยอดโบนัสและยอดชนะที่ได้รับจะถือเป็นโมฆะ		</li>								
-						<li>ฟรีเดิมพันที่ได้รับในหน้า MSPORTS จะหมดอายุอัตโนมัติ เมื่อไม่มีบิลคงค้าง และหากยอดคงเหลือใน MSPORTS น้อยกว่า 25 บาท โบนัสจะปรับให้กับสมาชิกอัตโนมัติ	</li>									
-						<li><a class="link" href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.th-TH" target="_blank">ข้อตกลงทั่วไปและเงื่อนไขการใช้งานโปรโมชั่น</a></li>										
-					</ol>
-				</div>
-			</div>
-		</div>
-		<!-- <div class="inner-box">
+  <head>
+    <title>M88</title>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery-migrate-1.4.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.plugin.min.js"
+    ></script>
+    <!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+    <script type="text/javascript" src="assets/js/papaparse.min.js"></script>
+  </head>
+  <body>
+    <header id="header" onclick="">
+      <div class="inner-box">
+        <div class="row">
+          <div class="col col-1">
+            <a href="index.html">
+              <picture>
+                <source
+                  srcset="assets/images/mlogo-mobile.svg"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="assets/images/mlogo-desktop.svg"
+                  media="(min-width: 768px)"
+                />
+                <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
+              </picture>
+            </a>
+          </div>
+          <div class="col col-2">
+            <a class="btn" role="button" onclick="openSearchRankPopup();"
+              >ตั๋วของฉัน</a
+            >
+            <div class="header__langs">
+              <div class="sel-lang">
+                <img src="assets/images/flags/th.svg" /><small class="langs"
+                  >ไทย</small
+                ><span></span>
+              </div>
+              <ul>
+                <li class="option-hover">
+                  <img src="assets/images/flags/en.svg" /><span class="spc-sm"
+                    >English</span
+                  >
+                </li>
+                <div class="cn-label">
+                  <div class="option-block">
+                    <a href="index.html"
+                      >Malaysian Ringgit<br /><small>(MYR)</small></a
+                    >
+                    <a href="index-inr.html"
+                      >Indian Rupee <small>(INR)</small></a
+                    >
+                  </div>
+                </div>
+                <li class="option-hover">
+                  <img src="assets/images/flags/cn.svg" /><span class="spc-sm"
+                    >简体中文</span
+                  >
+                </li>
+                <div class="cn-label">
+                  <div class="option-block">
+                    <a href="index-cn.html"
+                      >Chinese Yuan <small>(CNY)</small></a
+                    >
+                    <a href="index-mycn.html"
+                      >Malaysian Ringgit <br /><small>(MYR)</small></a
+                    >
+                  </div>
+                </div>
+                <li>
+                  <a href="index-th.html"
+                    ><img src="assets/images/flags/th.svg" /><span
+                      >ไทย <small>(THB)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-id.html"
+                    ><img src="assets/images/flags/id.svg" /><span
+                      >Bhs Indonesia <small>(IDR)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-vn.html"
+                    ><img src="assets/images/flags/vn.svg" /><span
+                      >Tiếng Việt <small>(VND)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-kr.html"
+                    ><img src="assets/images/flags/kr.svg" /><span
+                      >Korean <small>(KRW)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-jp.html"
+                    ><img
+                      class="jpflag"
+                      src="assets/images/flags/jpy.svg"
+                    /><span>Japanese <small>(USD)</small></span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="main" onclick="">
+      <div class="container">
+        <div class="coins">
+          <img class="coins-desk" src="assets/images/coins.png" />
+          <img class="coins-mobi" src="assets/images/coins-mobi.png" />
+        </div>
+        <div class="timer-container"></div>
+        <div class="inner-box inner-box-ledger">
+          <table class="ledger">
+            <caption>
+              <div class="row">
+                <div class="col col-1">
+                  <div class="row">
+                    <span class="col col-1">อีสปอร์ตแจกรางวัลทุกเดือน</span>
+                  </div>
+                  <!-- <div class="row"><span class="col loi-krathong">ศึกแดงเดือด BANGKOK CENTURY CUP 2022</span></div> -->
+                  <span class="line"></span>
+                </div>
+              </div>
+              <div class="col col-3">
+                <div class="promo-timer">
+                  <span class="timer-label">ระยะเวลาโปรโมชั่น</span>
+                  <div class="countdown">
+                    <div class="num-row">
+                      <div class="num-col col-days">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                      <div class="num-col col-hour">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                      <div class="num-col col-min">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                      <div class="num-col col-sec">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </caption>
+            <thead>
+              <tr>
+                <th><span>อันดับ</span></th>
+                <th style="text-align: center"><span>ชื่อผู้ใช้</span></th>
+                <th style="text-align: right"><span>คะแนนสะสม</span></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="wrap-show-more">
+          <a role="button" class="btn-show-more"
+            ><strong data-less="SEE LESS">SEE MORE</strong></a
+          >
+        </div>
+        <div class="inner-box">
+          <div class="accordion-box area-tnc">
+            <div class="accordion-parent">
+              <strong><span>ข้อกำหนดและเงื่อนไข</span></strong>
+            </div>
+            <div class="accordion-content">
+              <ol>
+                <li>
+                  โปรโมชั่นนี้สำหรับสมาชิกทั้งหมดที่อยู่ใน  M88
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>ระยะเวลาโปรโมชั่น (GMT+8)  </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          01 มีนาคม 2566 เวลา 00:00:00 น. – 31 ธันวาคม 2566 เวลา
+                          23:59:59 น. 
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li>
+                  ในช่วงระยะเวลาโปรโมชั่น สมาชิกที่เล่นใน "อีสปอร์ต"
+                  จะมีโอกาสลุ้นตั๋วสุุ่มรางวัลและชนะรางวัลสุดเอ็กซ์คลูซีฟทุกเดือน
+                  ตามรายละเอียดด้านล่าง
+                  <table>
+                    <thead>
+                      <tr>
+                        <th rowspan="2">จำนวนผู้ชนะ</th>
+                        <th rowspan="2">รางวัล</th>
+                        <th>แลกฟรีเดิมพัน (บาท)</th>
+                      </tr>
+                      <tr>
+                        <th>ทำเทิร์น 1 เท่า</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>12GB GRAPHICS CARD (การ์ดจอ) - RTX 3060 </td>
+                        <td>7,200</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>โอกาสเล่นเกม DOTA 2 กับทีม TALON  </td>
+                        <td>4,000</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>หูฟังไร้สาย STEELSERIES ARCTIS 1</td>
+                        <td>1,600</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>STEAM GIFT CARD $50</td>
+                        <td>800</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>เสื้อทีม TALON</td>
+                        <td>320</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>$10 GIFT CARD (STEAM/RIOT/GARENA) </td>
+                        <td>160</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  **ตั๋วสุ่มจะทำการปรับให้สมาชิกในวันถัดไป เวลาโดยประมาณ
+                  เที่ยงวันเป็นต้นไป (GMT+8)<br /><br />
+                  สมาชิกจะได้รับตั๋วสุ่มได้อย่างไร:
+                  <ul>
+                    <li>ทุกๆ ยอดฝากขั้นต่ำ 320 บาท/รายการ จะได้รับ 1 ตั๋ว</li>
+                    <li>ทุกๆ ยอดเดิมพัน 160 บาทในอีสปอร์ต จะได้รับ 1 ตั๋ว</li>
+                    <li>
+                      ทุกๆ ยอดเดิมพัน 160 บาท ในผลิตภัณฑ์อื่นๆ ของ M88 จะได้รับ
+                      1 ตั๋ว
+                    </li>
+                    <li>
+                      ทุกการแนะนำเพื่อน (ที่สมัครสมาชิกใหม่เท่านั้น) จะได้รับ 5
+                      ตั๋ว
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  สมาชิกจะต้องคลิกปุ่ม "เข้าร่วม" (หลังจากเข้าสู่ระบบ)
+                  เพื่อเข้าร่วมโปรโมชั่น โบนัสจะไม่สามารถปรับย้อนหลังได้
+                  ในกรณีที่สมาชิกไม่กดเข้าร่วมในช่วงเวลาโปรโมชั่นที่กำหนด
+                </li>
+                <li>
+                  เฉพาะการเดิมพันที่ใช้เงินจริงเท่านั้น
+                  ที่จะนำมาคำนวณในโปรโมชั่นนี้ รายการเดิมพันที่โมฆะ ยกเลิก
+                  และการเดิมพันใน เกมส์ที่ไม่เข้าร่วม
+                  จะไม่สามารถนำมาคำนวณในยอดเดิมพันรวม และ/หรือ
+                  ยอดเดิมพันหมุนเวียนได้ (เมื่อตรงตามเงื่อนไข)
+                </li>
+                <li>
+                  ของรางวัลที่แลกเปลี่ยนเป็นฟรีเดิมพัน
+                  สมาชิกจะต้องทำยอดเดิมพันหมุนเวียน  1 เท่า ใน "อีสปอร์ต"
+                  ก่อนทำรายการถอน
+                </li>
+                <li>
+                  โบนัส จะทำการปรับเข้ากระเป๋าเงินของสมาชิกอัตโนมัติ ภายใน 5
+                  วันทำการ หลังจากโปรโมชั่นสิ้นสุดลง หากไม่มีการใช้งาน
+                  โบนัสที่ได้รับจะหมดอายุภายใน 5 วันหลังจากวันที่ได้รับโบนัส
+                </li>
+                <li>
+                  สมาชิกจะได้รับการติดต่อเพื่อรับของรางวัลภายใน 5
+                  วันหลังจากโปรโมชั่นสิ้นสุดลง หากไม่สามารถติดต่อได้
+                  รางวัลจะถือเป็นโมฆะ
+                </li>
+                <li>
+                  สมาชิกจะต้องทำยอดเดิมพันหมุนเวียนให้สำเร็จภายใน 7
+                  วันหลังจากได้รับโบนัส หากเกินระยะเวลาที่กำหนด
+                  ยอดโบนัสและยอดชนะที่ได้รับจะถือเป็นโมฆะ
+                </li>
+                <li>
+                  ฟรีเดิมพันที่ได้รับในหน้า MSPORTS จะหมดอายุอัตโนมัติ
+                  เมื่อไม่มีบิลคงค้าง และหากยอดคงเหลือใน MSPORTS น้อยกว่า 25 บาท
+                  โบนัสจะปรับให้กับสมาชิกอัตโนมัติ
+                </li>
+                <li>
+                  <a
+                    class="link"
+                    href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.th-TH"
+                    target="_blank"
+                    >ข้อตกลงทั่วไปและเงื่อนไขการใช้งานโปรโมชั่น</a
+                  >
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="inner-box">
 			<div class="footer-text">
 				<p>JADILAH YANG PALING ATAS!<br>Ingat, semakin tinggi peringkat, semakin besar hadiahnya!</p>
 			</div>
 		</div> -->
-	</div>
-</div>
-<footer id="footer">
-	<div class="row1-wrapper">
-		<div class="inner-box">
-			<div class="row-flex row-1">
-				<div class="sec sec-1">
-					<span class="po-label">Payment Options</span>
-					<div class="po-list">
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer-colored.svg" /></div>
-							</a>
-						</div>
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-help2pay.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-help2pay-colored.svg" /></div>
-							</a>
-						</div>
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-paytrust.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-paytrust-colored.svg" /></div>
-							</a>
-						</div>
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-ninepay.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-ninepay-colored.svg" /></div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="sec sec-3">
-					<div class="social-list">
-						<div class="img-box">
-							<a href="https://twitter.com/ThailandM88" target="_blank">
-								<div class="img-holder"><img src="assets/images/footer/icon-twitter.svg"></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-twitter-colored.svg"></div>
-							</a>
-						</div>
-						<div class="img-box">
-							<a href="https://www.youtube.com/channel/UCLQCeN8CVYye1DL2Xpq2IuA/videos" target="_blank">
-								<div class="img-holder"><img src="assets/images/footer/icon-youtube.svg"></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-youtube-colored.svg"></div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="inner-box">
-		<div class="row-2 provider-list">
-			<div class="inner">
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-opus.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-opus-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-ag.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-ag-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-cq9.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-cq9-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-habanero.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-habanero-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-mgs.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-mgs-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-skywind.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-skywind-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-sabasport.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-sabasport-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-playngo.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-playngo-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-lottoland.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-lottoland-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-idnplay.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-idnplay-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-playtech.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-playtech-colored.svg"></div>
-					</div>
-				</div>
-				<!-- <div class="box">
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="row1-wrapper">
+        <div class="inner-box">
+          <div class="row-flex row-1">
+            <div class="sec sec-1">
+              <span class="po-label">Payment Options</span>
+              <div class="po-list">
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-quicktransfer.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-quicktransfer-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-help2pay.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-help2pay-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-paytrust.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-paytrust-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-ninepay.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-ninepay-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="sec sec-3">
+              <div class="social-list">
+                <div class="img-box">
+                  <a href="https://twitter.com/ThailandM88" target="_blank">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-twitter.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-twitter-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box">
+                  <a
+                    href="https://www.youtube.com/channel/UCLQCeN8CVYye1DL2Xpq2IuA/videos"
+                    target="_blank"
+                  >
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-youtube.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-youtube-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-box">
+        <div class="row-2 provider-list">
+          <div class="inner">
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-opus.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-opus-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-ag.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-ag-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-cq9.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-cq9-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-habanero.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-habanero-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-isoftbet.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-isoftbet-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-mgs.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-mgs-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-skywind.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-skywind-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-pragmatic.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-pragmatic-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-sabasport.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-sabasport-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playngo.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playngo-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-lottoland.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-lottoland-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-idnplay.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-idnplay-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playtech.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playtech-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- <div class="box">
 					<div class="img-box">
 						<div class="img-holder"><img src="assets/images/footer/logo-netent.svg"></div>
 						<div class="img-holder"><img src="assets/images/footer/logo-netent-colored.svg"></div>
 					</div>
 				</div> -->
-			</div>			
-		</div>
-
-	</div>
-	<div class=" row-flex row-3">
-		<div class="inner-box">
-			<div class="sec sec-1">
-				<div class="sponsors-list">
-					<div class="spon-blurb laliga">
-						<img src="assets/images/footer/icon-laliga.svg">
-						<div class="txt-area">
-							<div class="name white"><strong>Official Regional Partner</strong></div>
-							<div class="year white">2020 - 2024</div>
-						</div>
-					</div>
-					<div class="spon-blurb">
-						<img src="assets/images/footer/icon-bournemouth.svg">
-						<div class="txt-area">
-							<div class="name"><strong>AFC BOURNEMOUTH</strong></div>
-							<div class="year">2016 - 2020</div>
-						</div>
-					</div>
-					<div class="spon-blurb">
-						<img src="assets/images/footer/icon-crystalpalace.svg">
-						<div class="txt-area">
-							<div class="name"><strong>CRYSTAL PALACE</strong></div>
-							<div class="year">2015 - 2017</div>
-						</div>
-					</div>
-					<div class="spon-blurb">
-						<img src="assets/images/footer/icon-manchester.svg">
-						<div class="txt-area">
-							<div class="name"><strong>MANCHESTER CITY</strong></div>
-							<div class="year">2011 - 2012</div>
-						</div>
-					</div>
-					<div class="spon-blurb">
-						<img src="assets/images/footer/icon-tottenham.svg">
-						<div class="txt-area">
-							<div class="name"><strong>TOTTENHAM HOTSPURS</strong></div>
-							<div class="year">2006 - 2010</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-	<div class="row4-wrapper">
-		<div class="inner-box">
-			<div class=" row-flex row-4">
-				<div class="sec sec-3">
-					<p>M88 is committed to supporting <a href="#" class="link">Responsible Gaming</a></p>
-				</div>
-				<!-- <div class="sec sec-2">
+          </div>
+        </div>
+      </div>
+      <div class="row-flex row-3">
+        <div class="inner-box">
+          <div class="sec sec-1">
+            <div class="sponsors-list">
+              <div class="spon-blurb laliga">
+                <img src="assets/images/footer/icon-laliga.svg" />
+                <div class="txt-area">
+                  <div class="name white">
+                    <strong>Official Regional Partner</strong>
+                  </div>
+                  <div class="year white">2020 - 2024</div>
+                </div>
+              </div>
+              <div class="spon-blurb">
+                <img src="assets/images/footer/icon-bournemouth.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>AFC BOURNEMOUTH</strong></div>
+                  <div class="year">2016 - 2020</div>
+                </div>
+              </div>
+              <div class="spon-blurb">
+                <img src="assets/images/footer/icon-crystalpalace.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>CRYSTAL PALACE</strong></div>
+                  <div class="year">2015 - 2017</div>
+                </div>
+              </div>
+              <div class="spon-blurb">
+                <img src="assets/images/footer/icon-manchester.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>MANCHESTER CITY</strong></div>
+                  <div class="year">2011 - 2012</div>
+                </div>
+              </div>
+              <div class="spon-blurb">
+                <img src="assets/images/footer/icon-tottenham.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>TOTTENHAM HOTSPURS</strong></div>
+                  <div class="year">2006 - 2010</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row4-wrapper">
+        <div class="inner-box">
+          <div class="row-flex row-4">
+            <div class="sec sec-3">
+              <p>
+                M88 is committed to supporting
+                <a href="#" class="link">Responsible Gaming</a>
+              </p>
+            </div>
+            <!-- <div class="sec sec-2">
 					<div class="partners-list">
 						<img src="assets/images/footer/icon-ga.svg">
 						<img src="assets/images/footer/icon-itech.svg">
 					</div>
 				</div> -->
-				<div class="sec sec-4">
-					<img class="ga" src="assets/images/footer/ga.svg">
-					<img class="itech" src="assets/images/footer/itech.svg">
-					<img class="18" src="assets/images/footer/18.svg">
-					<span class="copyright">M88.com 2022</span>
-					<!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
-				</div>
-			</div>
-			<div class="sec row-5">
-				<p>Terms and Conditions apply. Please refer to the promotions page for more details.</p>
-				<p>M88.com uses certain browser cookies to ensure you receive the best gaming experience. By accessing and continuing to use the site you accept the use of these cookies. For information on our use of cookies and how to prevent them please refer to M88´s <strong> <u><a href="https://help.m88.com/termOfUse_tc_th.asp">terms of use</a></u></strong></p>
-			</div>
-		</div>
-	</div>
-</footer>
-<div class="area-popup popup-search-rank">
-	<div class="inner-box">
-		<div class="popup">
-			<div class="popup-head">
-				<div class="inner-box">
-					<a role="button" class="btn-close" onclick="closePopup()">close</a>
-				</div>
-			</div>
-			<div class="popup-content">
-				<div class="txt-1">
-					<strong class="msg msg-default">ตั๋วของฉัน</strong>
-					<strong class="msg msg-invalid">สวัสดี <span class="un"></span></strong>
-				</div>
-				<div class="txt-2">
-					<div class="msg msg-default">กรุณาใส่ยูสเซอร์เนมเพื่อตรวจสอบจำนวนตั๋ว</div>
-					<div class="msg msg-invalid">ขออภัยเราไม่เห็นชื่อผู้ใช้ของคุณ<br>
-					หรือคุณอาจจะใส่ยูเซอร์เนมไม่ถูกต้อง</div>
-				</div>
-				<form id="form" class="area-form" onsubmit="submitRankSearchForm(this);return false;">
-					<div class="field-area">
-						<label for="reg-name"><strong>ชื่อผู้ใช้</strong></label>
-						<div class="field"><input type="text" name="un" data-required="true" /></div>
-					</div>
-					<button type="submit" role="button" class="btn">ส่ง</button>
-					<div class="wrap-btn-cancel"><a role="button" class="btn-cancel" onclick="closePopup()"><strong>ยกเลิก</strong></a></div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="area-popup popup-search-rank-result">
-	<div class="inner-box">
-		<div class="popup">
-			<div class="popup-head">
-				<div class="inner-box">
-					<a role="button" class="btn-close" onclick="closePopup()">close</a>
-				</div>
-			</div>
-			<div class="popup-content">
-				<div class="txt-1"><strong>คุณมีตั๋วสุ่ม <span class="highlight rank-result"></span> ใบ</strong></div>
-				<a role="button" class="btn" onclick="closePopup()">ปิด</a>
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript" src="assets/js/scripts.js"></script>
-</body>
+            <div class="sec sec-4">
+              <img class="ga" src="assets/images/footer/ga.svg" />
+              <img class="itech" src="assets/images/footer/itech.svg" />
+              <img class="18" src="assets/images/footer/18.svg" />
+              <span class="copyright">M88.com 2022</span>
+              <!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
+            </div>
+          </div>
+          <div class="sec row-5">
+            <p>
+              Terms and Conditions apply. Please refer to the promotions page
+              for more details.
+            </p>
+            <p>
+              M88.com uses certain browser cookies to ensure you receive the
+              best gaming experience. By accessing and continuing to use the
+              site you accept the use of these cookies. For information on our
+              use of cookies and how to prevent them please refer to M88´s
+              <strong>
+                <u
+                  ><a href="https://help.m88.com/termOfUse_tc_th.asp"
+                    >terms of use</a
+                  ></u
+                ></strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="area-popup popup-search-rank">
+      <div class="inner-box">
+        <div class="popup">
+          <div class="popup-head">
+            <div class="inner-box">
+              <a role="button" class="btn-close" onclick="closePopup()"
+                >close</a
+              >
+            </div>
+          </div>
+          <div class="popup-content">
+            <div class="txt-1">
+              <strong class="msg msg-default">ตั๋วของฉัน</strong>
+              <strong class="msg msg-invalid"
+                >สวัสดี <span class="un"></span
+              ></strong>
+            </div>
+            <div class="txt-2">
+              <div class="msg msg-default">
+                กรุณาใส่ยูสเซอร์เนมเพื่อตรวจสอบจำนวนตั๋ว
+              </div>
+              <div class="msg msg-invalid">
+                ขออภัยเราไม่เห็นชื่อผู้ใช้ของคุณ<br />
+                หรือคุณอาจจะใส่ยูเซอร์เนมไม่ถูกต้อง
+              </div>
+            </div>
+            <form
+              id="form"
+              class="area-form"
+              onsubmit="submitRankSearchForm(this);return false;"
+            >
+              <div class="field-area">
+                <label for="reg-name"><strong>ชื่อผู้ใช้</strong></label>
+                <div class="field">
+                  <input type="text" name="un" data-required="true" />
+                </div>
+              </div>
+              <button type="submit" role="button" class="btn">ส่ง</button>
+              <div class="wrap-btn-cancel">
+                <a role="button" class="btn-cancel" onclick="closePopup()"
+                  ><strong>ยกเลิก</strong></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="area-popup popup-search-rank-result">
+      <div class="inner-box">
+        <div class="popup">
+          <div class="popup-head">
+            <div class="inner-box">
+              <a role="button" class="btn-close" onclick="closePopup()"
+                >close</a
+              >
+            </div>
+          </div>
+          <div class="popup-content">
+            <div class="txt-1">
+              <strong
+                >คุณมีตั๋วสุ่ม
+                <span class="highlight rank-result"></span> ใบ</strong
+              >
+            </div>
+            <a role="button" class="btn" onclick="closePopup()">ปิด</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+  </body>
 </html>

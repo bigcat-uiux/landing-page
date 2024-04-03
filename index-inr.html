@@ -1,55 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>M88</title>
-<meta charset="utf-8" />
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
-<link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-1.4.1.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.plugin.min.js"></script>
-<!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
-<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
-<script type="text/javascript" src="assets/js/papaparse.min.js"></script>
-</head>
-<body>
-<header id="header" onclick="hid__grp()">
-	<div class="inner-box">
-		<div class="row">
-			<div class="col col-1">
-				<a href="index.html">
-					<picture>
-					   <source srcset="assets/images/mlogo-mobile.svg" media="(max-width: 767px)">
-					   <source srcset="assets/images/mlogo-desktop.svg" media="(min-width: 768px)">
-					   <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
-					</picture>
-				</a>
-			</div>
-			<div class="col col-2">
-				<a class="btn" role="button" onclick="openSearchRankPopup();">MY RANKING</a>
-				<div class="header__langs">
-					<div class="sel-lang"><img class="resizeflag" src="assets/images/flags/inr.svg"><small class="langs">English <small>(INR)</small></small><span></span></div>
-					<ul>
-						<li class="option-hover"><img src="assets/images/flags/en.svg"><span class="spc-sm">English</span></li>
-						<div class="cn-label">
-							<div class="option-block">
-								<a href="index.html">Malaysian Ringgit<br><small>(MYR)</small></a>
-								<a href="index-inr.html">Indian Rupee <small>(INR)</small></a>
-							</div>
-						</div>
-						<li><a href="index-cn.html"><img src="assets/images/flags/cn.svg"><span>Chinese</span></a></li>
-						<li><a href="index-th.html"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
-						<li><a href="index-id.html"><img src="assets/images/flags/id.svg"><span>Bhs Indonesia <small>(IDR)</small></span></a></li>
-						<li><a href="index-vn.html"><img src="assets/images/flags/vn.svg"><span>Tiếng Việt <small>(VND)</small></span></a></li>
-						<li><a href="index-kr.html"><img src="assets/images/flags/kr.svg"><span>Korean <small>(KRW)</small></span></a></li>
-						<li><a href="index-jp.html"><img class="resizeflag" src="assets/images/flags/jpy.svg"><span>Japanese <small>(USD)</small></span></a></li>
-					</ul>
-				</div>
-				<!-- <div class="lang-area">
+  <head>
+    <title>M88</title>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery-migrate-1.4.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.plugin.min.js"
+    ></script>
+    <!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+    <script type="text/javascript" src="assets/js/papaparse.min.js"></script>
+  </head>
+  <body>
+    <header id="header" onclick="">
+      <div class="inner-box">
+        <div class="row">
+          <div class="col col-1">
+            <a href="index.html">
+              <picture>
+                <source
+                  srcset="assets/images/mlogo-mobile.svg"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="assets/images/mlogo-desktop.svg"
+                  media="(min-width: 768px)"
+                />
+                <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
+              </picture>
+            </a>
+          </div>
+          <div class="col col-2">
+            <a class="btn" role="button" onclick="openSearchRankPopup();"
+              >MY RANKING</a
+            >
+            <div class="header__langs">
+              <div class="sel-lang">
+                <img
+                  class="resizeflag"
+                  src="assets/images/flags/inr.svg"
+                /><small class="langs">English <small>(INR)</small></small
+                ><span></span>
+              </div>
+              <ul>
+                <li class="option-hover">
+                  <img src="assets/images/flags/en.svg" /><span class="spc-sm"
+                    >English</span
+                  >
+                </li>
+                <div class="cn-label">
+                  <div class="option-block">
+                    <a href="index.html"
+                      >Malaysian Ringgit<br /><small>(MYR)</small></a
+                    >
+                    <a href="index-inr.html"
+                      >Indian Rupee <small>(INR)</small></a
+                    >
+                  </div>
+                </div>
+                <li>
+                  <a href="index-cn.html"
+                    ><img src="assets/images/flags/cn.svg" /><span
+                      >Chinese</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-th.html"
+                    ><img src="assets/images/flags/th.svg" /><span
+                      >ไทย <small>(THB)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-id.html"
+                    ><img src="assets/images/flags/id.svg" /><span
+                      >Bhs Indonesia <small>(IDR)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-vn.html"
+                    ><img src="assets/images/flags/vn.svg" /><span
+                      >Tiếng Việt <small>(VND)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-kr.html"
+                    ><img src="assets/images/flags/kr.svg" /><span
+                      >Korean <small>(KRW)</small></span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="index-jp.html"
+                    ><img
+                      class="resizeflag"
+                      src="assets/images/flags/jpy.svg"
+                    /><span>Japanese <small>(USD)</small></span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="lang-area">
 					<div class="sel-lang"><img src="assets/images/flags/en.svg"><span class="lang">English</span><span class="arrow"></span></div>
 					<ul>
 						<li><a href="index.html"><img src="assets/images/flags/en.svg"><span>English</span></a></li>
@@ -71,413 +146,616 @@
 						<li><a href="index.html?lang=th"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
 					</ul>
 				</div> -->
-			</div>
-		</div>
-	</div>
-</header>
-<div id="main" onclick="hid__grp()">
-	<div class="container">
-		<div class="coins">
-			<img class="coins-desk" src="assets/images/coins.png">
-			<img class="coins-mobi" src="assets/images/coins-mobi.png">
-		</div>
-		<div class="timer-container"></div>
-		<div class="inner-box inner-box-ledger">
-			<table class="ledger">
-				<caption>
-					<div class="row">
-						<div class="col col-1">
-							<div class="row"><span class="col col-1">VIVA LEADERBOARD</span></div>
-							<div class="row"><span class="col loi-krathong">MAKE YOUR WAY TO THE TOP</span></div>
-							<span class="line"></span>
-						</div>
-					</div>
-					<div class="col col-3">
-						<div class="promo-timer">
-							<span class="timer-label">Promo Duration</span>
-							<div class="countdown">
-								<div class="num-row">
-									<div class="num-col col-days">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-									<div class="num-col col-hour">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-									<div class="num-col col-min">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-									<div class="num-col col-sec">
-										<div class="num-holder">
-											<div class="num-bg">0</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</caption>
-				<thead>
-					<tr>
-						<th><span>RANK</span></th>
-						<th><span>USERNAME</span></th>
-						<!-- <th><span>PRIZE</span></th> -->
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-			
-		</div>
-		<div class="wrap-show-more"><a role="button" class="btn-show-more"><strong data-less="SEE LESS">SEE MORE</strong></a></div>
-		<div class="inner-box">
-			<div class="accordion-box area-tnc">
-				<div class="accordion-parent"><strong><span>TERMS & CONDITIONS</span></strong></div>
-				<div class="accordion-content">
-					<ol>
-						<li>This promotion is applicable to all members M88
-							<table>
-								<thead>
-									<tr>
-										<th>PROMOTION PERIOD (GMT+8)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>01 March 2023 00:00:00 - 31 December 2023 23:59:59</td>
-									</tr>
-								</tbody>
-							</table>
-						</li>		
-						<li>During the promotion period, members who play all Esports will get raffle tickets and win monthly Exclusive prizes as below.
-							<table>
-								<thead>
-									<tr>
-										<th rowspan="2">No. Of Winners</th>
-										<th>FREE BET</th>
-									</tr>
-									<tr>
-										<th>With 1X RO (₹)</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>18000</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>10000</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>4000</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>2000</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>800</td>
-									</tr>
-									<tr>
-										<td>11</td>
-										<td>400</td>
-									</tr>
-								</tbody>
-							</table>	
-						<a class="link" href="https://m88.promo/" target="_blank">Click here </a>to see total raffle ticket<br>
-						 **The raffle ticket will be credit on the next day around 12 pm (GMT+8)<br><br>		
-						How to earn ticket for the raffle:
-						<ul>	
-							<li>1 Ticket for every minimum deposit ₹800		</li>
-							<li>+1 Ticket for every ₹400 turnover on Esports products 		</li>
-							<li>+1 Ticket for every ₹400  turnover on other M88 products 	</li>	
-							<li>+5 Ticket if you refer a friend (only for new member)</li>
-						</ul>
-						</li>		
-						<li>Members must click the "OPT-IN" button (after login) and submit before the promotion period ends. Promotion can be claimed only once and will be valid for the duration of the promotion period. We will not give credit bonuses for periods that have been missed.     	</li>	
-						<li>Only “Real Cash” and settled qualified bet will be counted towards for the calculation. All Tie/ Draw/ Refund/ Declined/ Void/ Canceled bets, bets on two opposite sites, bets on excluded games list and bets at decimal odds below 1.50 (Malay odds 0.50; HK odds 0.50; Indo Odds -2.00) will not be included in the calculation for turnover &/or rollover requirement (when applicable). 	</li>	
-						<li>The freebet must meet 1 time rollover in ESPORTS before any withdrawal can be made. </li>		
-						<li>Bonus will be credited to the members wallet within 5 days after the promotion period ends. An unused bonus amount will expire 5 days after the bonus has been credited.    </li>		
-						<li>After the promotion ends, in the next 5 days our Customer Service team will contact the winners to proceed with delivery. The prize will be forfeited if member is uncontactable  	</li>	
-						<li>The rollover condition must be fulfilled within 7 days after bonus funds have been credited. If not, the bonus and winning funds will be canceled  	</li>	
-						<li><a class="link" href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.en-US" target="_blank">General terms & conditions of promotions apply</a>.</li>
-					</ol>
-				</div>
-			</div>
-		</div>
-		<!-- <div class="inner-box">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="main" onclick="">
+      <div class="container">
+        <div class="coins">
+          <img class="coins-desk" src="assets/images/coins.png" />
+          <img class="coins-mobi" src="assets/images/coins-mobi.png" />
+        </div>
+        <div class="timer-container"></div>
+        <div class="inner-box inner-box-ledger">
+          <table class="ledger">
+            <caption>
+              <div class="row">
+                <div class="col col-1">
+                  <div class="row">
+                    <span class="col col-1">VIVA LEADERBOARD</span>
+                  </div>
+                  <div class="row">
+                    <span class="col loi-krathong"
+                      >MAKE YOUR WAY TO THE TOP</span
+                    >
+                  </div>
+                  <span class="line"></span>
+                </div>
+              </div>
+              <div class="col col-3">
+                <div class="promo-timer">
+                  <span class="timer-label">Promo Duration</span>
+                  <div class="countdown">
+                    <div class="num-row">
+                      <div class="num-col col-days">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                      <div class="num-col col-hour">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                      <div class="num-col col-min">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                      <div class="num-col col-sec">
+                        <div class="num-holder">
+                          <div class="num-bg">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </caption>
+            <thead>
+              <tr>
+                <th><span>RANK</span></th>
+                <th><span>USERNAME</span></th>
+                <!-- <th><span>PRIZE</span></th> -->
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="wrap-show-more">
+          <a role="button" class="btn-show-more"
+            ><strong data-less="SEE LESS">SEE MORE</strong></a
+          >
+        </div>
+        <div class="inner-box">
+          <div class="accordion-box area-tnc">
+            <div class="accordion-parent">
+              <strong><span>TERMS & CONDITIONS</span></strong>
+            </div>
+            <div class="accordion-content">
+              <ol>
+                <li>
+                  This promotion is applicable to all members M88
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>PROMOTION PERIOD (GMT+8)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          01 March 2023 00:00:00 - 31 December 2023 23:59:59
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li>
+                  During the promotion period, members who play all Esports will
+                  get raffle tickets and win monthly Exclusive prizes as below.
+                  <table>
+                    <thead>
+                      <tr>
+                        <th rowspan="2">No. Of Winners</th>
+                        <th>FREE BET</th>
+                      </tr>
+                      <tr>
+                        <th>With 1X RO (₹)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>18000</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>10000</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>4000</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2000</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>800</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>400</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <a class="link" href="https://m88.promo/" target="_blank"
+                    >Click here </a
+                  >to see total raffle ticket<br />
+                   **The raffle ticket will be credit on the next day around 12
+                  pm (GMT+8)<br /><br />
+                  How to earn ticket for the raffle:
+                  <ul>
+                    <li>1 Ticket for every minimum deposit ₹800</li>
+                    <li>
+                      +1 Ticket for every ₹400 turnover on Esports products 
+                    </li>
+                    <li>
+                      +1 Ticket for every ₹400 turnover on other M88 products 
+                    </li>
+                    <li>
+                      +5 Ticket if you refer a friend (only for new member)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Members must click the "OPT-IN" button (after login) and
+                  submit before the promotion period ends. Promotion can be
+                  claimed only once and will be valid for the duration of the
+                  promotion period. We will not give credit bonuses for periods
+                  that have been missed.     
+                </li>
+                <li>
+                  Only “Real Cash” and settled qualified bet will be counted
+                  towards for the calculation. All Tie/ Draw/ Refund/ Declined/
+                  Void/ Canceled bets, bets on two opposite sites, bets on
+                  excluded games list and bets at decimal odds below 1.50 (Malay
+                  odds 0.50; HK odds 0.50; Indo Odds -2.00) will not be included
+                  in the calculation for turnover &/or rollover requirement
+                  (when applicable). 
+                </li>
+                <li>
+                  The freebet must meet 1 time rollover in ESPORTS before any
+                  withdrawal can be made. 
+                </li>
+                <li>
+                  Bonus will be credited to the members wallet within 5 days
+                  after the promotion period ends. An unused bonus amount will
+                  expire 5 days after the bonus has been credited.    
+                </li>
+                <li>
+                  After the promotion ends, in the next 5 days our Customer
+                  Service team will contact the winners to proceed with
+                  delivery. The prize will be forfeited if member is
+                  uncontactable  
+                </li>
+                <li>
+                  The rollover condition must be fulfilled within 7 days after
+                  bonus funds have been credited. If not, the bonus and winning
+                  funds will be canceled  
+                </li>
+                <li>
+                  <a
+                    class="link"
+                    href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.en-US"
+                    target="_blank"
+                    >General terms & conditions of promotions apply</a
+                  >.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="inner-box">
 			<div class="footer-text">
 				<p>JADILAH YANG PALING ATAS!<br>Ingat, semakin tinggi peringkat, semakin besar hadiahnya!</p>
 			</div>
 		</div> -->
-	</div>
-</div>
-<footer id="footer">
-	<div class="row1-wrapper">
-		<div class="inner-box">
-			<div class="row-flex row-1">
-				<div class="sec sec-1">
-					<span class="po-label">Payment Options</span>
-					<div class="po-list">
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer-colored.svg" /></div>
-							</a>
-						</div>
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-help2pay.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-help2pay-colored.svg" /></div>
-							</a>
-						</div>
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-paytrust.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-paytrust-colored.svg" /></div>
-							</a>
-						</div>
-						<div class="img-box">
-							<a href="#">
-								<div class="img-holder"><img src="assets/images/footer/icon-ninepay.svg" /></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-ninepay-colored.svg" /></div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="sec sec-3">
-					<div class="social-list">
-						<div class="img-box twitter-icon">
-							<a href="https://twitter.com/mym88mansion" target="_blank">
-								<div class="img-holder"><img src="assets/images/footer/icon-twitter.svg"></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-twitter-colored.svg"></div>
-							</a>
-						</div>
-						<div class="img-box youtube-icon">
-							<a href="https://www.youtube.com/channel/UCLQCeN8CVYye1DL2Xpq2IuA" target="_blank">
-								<div class="img-holder"><img src="assets/images/footer/icon-youtube.svg"></div>
-								<div class="img-holder"><img src="assets/images/footer/icon-youtube-colored.svg"></div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="inner-box">
-		<div class="row-2 provider-list">
-			<div class="inner">
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-opus.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-opus-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-ag.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-ag-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-cq9.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-cq9-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-habanero.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-habanero-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-mgs.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-mgs-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-skywind.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-skywind-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img class="saba-logo" src="assets/images/footer/logo-sabasport.svg"></div>
-						<div class="img-holder"><img class="saba-logo" src="assets/images/footer/logo-sabasport-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-playngo.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-playngo-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-lottoland.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-lottoland-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-idnplay.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-idnplay-colored.svg"></div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="img-box">
-						<div class="img-holder"><img src="assets/images/footer/logo-playtech.svg"></div>
-						<div class="img-holder"><img src="assets/images/footer/logo-playtech-colored.svg"></div>
-					</div>
-				</div>
-				<!-- <div class="box">
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="row1-wrapper">
+        <div class="inner-box">
+          <div class="row-flex row-1">
+            <div class="sec sec-1">
+              <span class="po-label">Payment Options</span>
+              <div class="po-list">
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-quicktransfer.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-quicktransfer-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-help2pay.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-help2pay-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-paytrust.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-paytrust-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-ninepay.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-ninepay-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="sec sec-3">
+              <div class="social-list">
+                <div class="img-box twitter-icon">
+                  <a href="https://twitter.com/mym88mansion" target="_blank">
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-twitter.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-twitter-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="img-box youtube-icon">
+                  <a
+                    href="https://www.youtube.com/channel/UCLQCeN8CVYye1DL2Xpq2IuA"
+                    target="_blank"
+                  >
+                    <div class="img-holder">
+                      <img src="assets/images/footer/icon-youtube.svg" />
+                    </div>
+                    <div class="img-holder">
+                      <img
+                        src="assets/images/footer/icon-youtube-colored.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-box">
+        <div class="row-2 provider-list">
+          <div class="inner">
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-opus.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-opus-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-ag.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-ag-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-cq9.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-cq9-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-habanero.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-habanero-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-isoftbet.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-isoftbet-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-mgs.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-mgs-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-skywind.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-skywind-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-pragmatic.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-pragmatic-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img
+                    class="saba-logo"
+                    src="assets/images/footer/logo-sabasport.svg"
+                  />
+                </div>
+                <div class="img-holder">
+                  <img
+                    class="saba-logo"
+                    src="assets/images/footer/logo-sabasport-colored.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playngo.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playngo-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-lottoland.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-lottoland-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-idnplay.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-idnplay-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="img-box">
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playtech.svg" />
+                </div>
+                <div class="img-holder">
+                  <img src="assets/images/footer/logo-playtech-colored.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- <div class="box">
 					<div class="img-box">
 						<div class="img-holder"><img src="assets/images/footer/logo-netent.svg"></div>
 						<div class="img-holder"><img src="assets/images/footer/logo-netent-colored.svg"></div>
 					</div>
 				</div> -->
-			</div>			
-		</div>
-
-	</div>
-	<div class=" row-flex row-3">
-		<div class="inner-box">
-			<div class="sec sec-1">
-				<div class="sponsors-list">
-					<div class="spon-blurb laliga">
-						<img src="assets/images/footer/icon-laliga.svg">
-						<div class="txt-area">
-							<div class="name white"><strong>Official Regional Partner</strong></div>
-							<div class="year white">2020 - 2024</div>
-						</div>
-					</div>
-					<div class="spon-blurb first-blurb">
-						<img src="assets/images/footer/icon-bournemouth.svg">
-						<div class="txt-area">
-							<div class="name"><strong>AFC Bournemouth</strong></div>
-							<div class="year">2016 - 2020</div>
-						</div>
-					</div>
-					<div class="spon-blurb">
-						<img src="assets/images/footer/icon-crystalpalace.svg">
-						<div class="txt-area">
-							<div class="name"><strong>Crystal Palace</strong></div>
-							<div class="year">2015 - 2017</div>
-						</div>
-					</div>
-					<div class="spon-blurb">
-						<img src="assets/images/footer/icon-manchester.svg">
-						<div class="txt-area">
-							<div class="name"><strong>Manchester City</strong></div>
-							<div class="year">2011 - 2012</div>
-						</div>
-					</div>
-					<div class="spon-blurb">
-						<img src="assets/images/footer/icon-tottenham.svg">
-						<div class="txt-area">
-							<div class="name"><strong>Tottenham Hotsours</strong></div>
-							<div class="year">2006 - 2010</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-	<div class="row4-wrapper">
-		<div class="inner-box">
-			<div class=" row-flex row-4">
-				<div class="sec sec-3">
-					<p>M88 is committed to supporting <a href="https://help.m88.com/responsibleGaming_en.asp" class="link">Responsible Gaming</a></p>
-				</div>
-				<!-- <div class="sec sec-2">
+          </div>
+        </div>
+      </div>
+      <div class="row-flex row-3">
+        <div class="inner-box">
+          <div class="sec sec-1">
+            <div class="sponsors-list">
+              <div class="spon-blurb laliga">
+                <img src="assets/images/footer/icon-laliga.svg" />
+                <div class="txt-area">
+                  <div class="name white">
+                    <strong>Official Regional Partner</strong>
+                  </div>
+                  <div class="year white">2020 - 2024</div>
+                </div>
+              </div>
+              <div class="spon-blurb first-blurb">
+                <img src="assets/images/footer/icon-bournemouth.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>AFC Bournemouth</strong></div>
+                  <div class="year">2016 - 2020</div>
+                </div>
+              </div>
+              <div class="spon-blurb">
+                <img src="assets/images/footer/icon-crystalpalace.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>Crystal Palace</strong></div>
+                  <div class="year">2015 - 2017</div>
+                </div>
+              </div>
+              <div class="spon-blurb">
+                <img src="assets/images/footer/icon-manchester.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>Manchester City</strong></div>
+                  <div class="year">2011 - 2012</div>
+                </div>
+              </div>
+              <div class="spon-blurb">
+                <img src="assets/images/footer/icon-tottenham.svg" />
+                <div class="txt-area">
+                  <div class="name"><strong>Tottenham Hotsours</strong></div>
+                  <div class="year">2006 - 2010</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row4-wrapper">
+        <div class="inner-box">
+          <div class="row-flex row-4">
+            <div class="sec sec-3">
+              <p>
+                M88 is committed to supporting
+                <a
+                  href="https://help.m88.com/responsibleGaming_en.asp"
+                  class="link"
+                  >Responsible Gaming</a
+                >
+              </p>
+            </div>
+            <!-- <div class="sec sec-2">
 					<div class="partners-list">
 						<img src="assets/images/footer/icon-ga.svg">
 						<img src="assets/images/footer/icon-itech.svg">
 					</div>
 				</div> -->
-				<div class="sec sec-4">
-					<img class="ga" src="assets/images/footer/ga.svg">
-					<img class="itech" src="assets/images/footer/itech.svg">
-					<img class="18" src="assets/images/footer/18.svg">
-					<span class="copyright">M88.com 2022</span>
-					<!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
-				</div>
-			</div>
-			<div class="sec row-5">
-				<p>Terms and Conditions apply. Please refer to the promotions page for more details.</p>
-				<p>M88.com uses certain browser cookies to ensure you receive the best gaming experience. By accessing and continuing to use the site you accept the use of these cookies. For information on our use of cookies and how to prevent them please refer to M88´s  <strong> <u><a href="https://help.m88.com/termOfUse_tc_en.asp">terms of use</a></u></strong></p>
-			</div>
-		</div>
-	</div>
-</footer>
-<div class="area-popup popup-search-rank">
-	<div class="inner-box">
-		<div class="popup">
-			<div class="popup-head">
-				<div class="inner-box">
-					<a role="button" class="btn-close" onclick="closePopup()">close</a>
-				</div>
-			</div>
-			<div class="popup-content">
-				<div class="txt-1">
-					<strong class="msg msg-default">My Ranking</strong>
-					<strong class="msg msg-invalid">Hi <span class="un"></span></strong>
-				</div>
-				<div class="txt-2">
-					<div class="msg msg-default">To check your ranking on the leaderboard , simply type your username below.</div>
-					<div class="msg msg-invalid">Unfortunately we cannot see your username.<br>
-					Or you may have search for a WRONG username.</div>
-				</div>
-				<form id="form" class="area-form" onsubmit="submitRankSearchForm(this);return false;">
-					<div class="field-area">
-						<label for="reg-name"><strong>Username</strong></label>
-						<div class="field"><input type="text" name="un" data-required="true" /></div>
-					</div>
-					<button type="submit" role="button" class="btn">OK</button>
-					<!-- <div class="wrap-btn-cancel"><a role="button" class="btn-cancel" onclick="closePopup()"><strong>Cancel</strong></a></div> -->
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="area-popup popup-search-rank-result">
-	<div class="inner-box">
-		<div class="popup">
-			<div class="popup-head">
-				<div class="inner-box">
-					<a role="button" class="btn-close" onclick="closePopup()">close</a>
-				</div>
-			</div>
-			<div class="popup-content">
-				<div class="txt-1"><strong>You ranked <span class="highlight rank-result"></span> on the Leaderboard!</strong></div>
-				<a role="button" class="btn" onclick="closePopup()">CLOSE</a>
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript" src="assets/js/scripts.js"></script>
-</body>
+            <div class="sec sec-4">
+              <img class="ga" src="assets/images/footer/ga.svg" />
+              <img class="itech" src="assets/images/footer/itech.svg" />
+              <img class="18" src="assets/images/footer/18.svg" />
+              <span class="copyright">M88.com 2022</span>
+              <!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
+            </div>
+          </div>
+          <div class="sec row-5">
+            <p>
+              Terms and Conditions apply. Please refer to the promotions page
+              for more details.
+            </p>
+            <p>
+              M88.com uses certain browser cookies to ensure you receive the
+              best gaming experience. By accessing and continuing to use the
+              site you accept the use of these cookies. For information on our
+              use of cookies and how to prevent them please refer to M88´s
+              <strong>
+                <u
+                  ><a href="https://help.m88.com/termOfUse_tc_en.asp"
+                    >terms of use</a
+                  ></u
+                ></strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="area-popup popup-search-rank">
+      <div class="inner-box">
+        <div class="popup">
+          <div class="popup-head">
+            <div class="inner-box">
+              <a role="button" class="btn-close" onclick="closePopup()"
+                >close</a
+              >
+            </div>
+          </div>
+          <div class="popup-content">
+            <div class="txt-1">
+              <strong class="msg msg-default">My Ranking</strong>
+              <strong class="msg msg-invalid"
+                >Hi <span class="un"></span
+              ></strong>
+            </div>
+            <div class="txt-2">
+              <div class="msg msg-default">
+                To check your ranking on the leaderboard , simply type your
+                username below.
+              </div>
+              <div class="msg msg-invalid">
+                Unfortunately we cannot see your username.<br />
+                Or you may have search for a WRONG username.
+              </div>
+            </div>
+            <form
+              id="form"
+              class="area-form"
+              onsubmit="submitRankSearchForm(this);return false;"
+            >
+              <div class="field-area">
+                <label for="reg-name"><strong>Username</strong></label>
+                <div class="field">
+                  <input type="text" name="un" data-required="true" />
+                </div>
+              </div>
+              <button type="submit" role="button" class="btn">OK</button>
+              <!-- <div class="wrap-btn-cancel"><a role="button" class="btn-cancel" onclick="closePopup()"><strong>Cancel</strong></a></div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="area-popup popup-search-rank-result">
+      <div class="inner-box">
+        <div class="popup">
+          <div class="popup-head">
+            <div class="inner-box">
+              <a role="button" class="btn-close" onclick="closePopup()"
+                >close</a
+              >
+            </div>
+          </div>
+          <div class="popup-content">
+            <div class="txt-1">
+              <strong
+                >You ranked <span class="highlight rank-result"></span> on the
+                Leaderboard!</strong
+              >
+            </div>
+            <a role="button" class="btn" onclick="closePopup()">CLOSE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+  </body>
 </html>
