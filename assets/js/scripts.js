@@ -172,10 +172,21 @@ var playerList = [];
 var path = window.location.href;
 var lang = path.slice(-7, -5);
 
-if (lang == "de" || lang == "ex") {
-  lang = "my";
-} else if (lang == "nr") {
-  lang = "inr";
+if (
+  !(
+    lang == "cn" ||
+    lang == "id" ||
+    lang == "jp" ||
+    lang == "kr" ||
+    lang == "th" ||
+    lang == "vn"
+  )
+) {
+  if (lang == "nr") {
+    lang = "inr";
+  } else {
+    lang = "my";
+  }
 }
 
 Papa.parse(`assets/csv/un-${lang.toUpperCase()}.csv`, {
@@ -252,252 +263,6 @@ Papa.parse(`assets/csv/un-${lang.toUpperCase()}.csv`, {
     $(".un-box").width(unBoxMaxWidth);
   },
 });
-
-// first, create a switch case
-// the switch case will depend on lang variable
-// based on it, it will show the right csv file
-// Papa.parse("assets/csv/un-.csv", {
-//   header: true,
-//   download: true,
-//   dynamicTyping: true,
-//   complete: function (results) {
-//     var tbodyHTML = "";
-//     var counter = 0;
-//     results.data.forEach(function (row) {
-//       if (row.username) {
-//         var uFlag;
-//         var uRank;
-
-//         // change : uFlag can be decided based lang on csv file
-//         switch (row.currency) {
-//           case "MY-CN":
-//             uFlag = "my-cn";
-//             break;
-//           case "IDR":
-//             uFlag = "id";
-//             break;
-//           case "VND":
-//             uFlag = "vn";
-//             break;
-//           case "THB":
-//             uFlag = "th";
-//             break;
-//           case "USD-JP":
-//             uFlag = "jpy";
-//             break;
-//           case "KRW":
-//             uFlag = "kr";
-//             break;
-//           default:
-//             uFlag = "en";
-//         }
-//         // keep
-//         switch (counter) {
-//           case 0:
-//             uRank = "first";
-//             break;
-//           case 1:
-//             uRank = "second";
-//             break;
-//           case 2:
-//             uRank = "third";
-//             break;
-//           default:
-//             uRank = "";
-//         }
-
-//         if (lang == "id") {
-//           if (row.currency == "IDR") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + "</td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         } else if (lang == "vn") {
-//           if (row.currency == "VND") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + "</td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         } else if (lang == "th") {
-//           if (row.currency == "THB") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + " </td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         } else if (lang == "my-cn") {
-//           if (row.currency == "MY-CN") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + "</td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         } else if (lang == "cny") {
-//           if (row.currency == "CNY") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + "</td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         } else if (lang == "jp") {
-//           if (row.currency == "USD-JP") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + "</td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         } else if (lang == "kr") {
-//           if (row.currency == "KRW") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + "</td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         } else {
-//           if (row.currency == "MYR") {
-//             if (counter < 20) {
-//               tbodyHTML += '<tr id="row-' + uRank + '">';
-//               tbodyHTML +=
-//                 '<td class="rank"><span class="num ' +
-//                 uRank +
-//                 '">' +
-//                 (counter + 1) +
-//                 "</span></td>";
-//               tbodyHTML +=
-//                 '<td class="un"><div class="un-box"><img src="assets/images/flags/' +
-//                 uFlag +
-//                 '.svg" /><span>' +
-//                 unEncrypt(row.username) +
-//                 "</span></div></td>";
-//               tbodyHTML += '<td class="wager">' + row.prize + "</td>";
-//               tbodyHTML += "</tr>";
-//             }
-//             playerList.push(row);
-//             counter++;
-//           }
-//         }
-//       }
-//     });
-
-//     $(".ledger tbody").html(tbodyHTML);
-//     var unBoxMaxWidth = Math.max.apply(
-//       Math,
-//       $(".un-box")
-//         .map(function () {
-//           return $(this).width();
-//         })
-//         .get()
-//     );
-//     $(".un-box").width(unBoxMaxWidth);
-//   },
-// });
 
 $(document).on("keyup change blur", '[data-required="true"]', function () {
   var thisSubmitBtn = $(this).closest("form").find('[type="submit"]');
