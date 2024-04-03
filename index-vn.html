@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>M88</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+<link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.plugin.min.js"></script>
+<!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
+<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+<script type="text/javascript" src="assets/js/papaparse.min.js"></script>
+<style>
+	.ledger caption > .row > .col-1 > .row .col-1 {
+		font-family: 'Roboto';
+	}
+	body {
+		font-family: 'Roboto';
+	}
+</style>
+</head>
+<body>
+<header id="header" onclick="hid__grp()">
+	<div class="inner-box">
+		<div class="row">
+			<div class="col col-1">
+				<a href="index.html">
+					<picture>
+					   <source srcset="assets/images/mlogo-mobile.svg" media="(max-width: 767px)">
+					   <source srcset="assets/images/mlogo-desktop.svg" media="(min-width: 768px)">
+					   <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
+					</picture>
+				</a>
+			</div>
+			<div class="col col-2">
+				<a class="btn" role="button" onclick="openSearchRankPopup();">SỐ VÉ CỦA TÔI</a>
+				<div class="header__langs">
+					<div class="sel-lang"><img src="assets/images/flags/vn.svg"><small class="langs">Tiếng Việt</small><span></span></div>
+					<ul>
+						<li class="option-hover"><img src="assets/images/flags/en.svg"><span class="spc-sm">English</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index.html">Malaysian Ringgit<br><small>(MYR)</small></a>
+								<a href="index-inr.html">Indian Rupee <small>(INR)</small></a>
+							</div>
+						</div>
+						<li class="option-hover"><img src="assets/images/flags/cn.svg"><span class="spc-sm">简体中文</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index-cn.html">Chinese Yuan <small>(CNY)</small></a>
+								<a href="index-mycn.html">Malaysian Ringgit <br><small>(MYR)</small></a>
+							</div>
+						</div>
+						<li><a href="index-th.html"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
+						<li><a href="index-id.html"><img src="assets/images/flags/id.svg"><span>Bhs Indonesia <small>(IDR)</small></span></a></li>
+						<li><a href="index-vn.html"><img src="assets/images/flags/vn.svg"><span>Tiếng Việt <small>(VND)</small></span></a></li>
+						<li><a href="index-kr.html"><img src="assets/images/flags/kr.svg"><span>Korean <small>(KRW)</small></span></a></li>
+						<li><a href="index-jp.html"><img class="jpflag" src="assets/images/flags/jpy.svg"><span>Japanese <small>(USD)</small></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" onclick="hid__grp()">
+	<div class="container">
+		<div class="coins">
+			<img class="coins-desk" src="assets/images/coins.png">
+			<img class="coins-mobi" src="assets/images/coins-mobi.png">
+		</div>
+		<div class="timer-container"></div>
+		<div class="inner-box inner-box-ledger">
+			<table class="ledger">
+				<caption>
+					<div class="row">
+						<div class="col col-1">
+							<div class="row"><span class="col col-1">ESPORTS THƯỞNG ĐỘC QUYỀN</span></div>
+							<div class="row"><span class="col loi-krathong">HÀNG THÁNG</span></div>
+							<span class="line"></span>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="promo-timer">
+							<span class="timer-label">Thời Hạn Khuyến Mãi</span>
+							<div class="countdown">
+								<div class="num-row">
+									<div class="num-col col-days">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-hour">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-min">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-sec">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</caption>
+				<thead>
+					<tr>
+						<th><span>Xếp Hạng</span></th>
+						<th><span>Tên Đăng Nhập</span></th>
+						<th><span>Số Vé Rút Thăm</span></th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div class="wrap-show-more"><a role="button" class="btn-show-more"><strong data-less="SEE LESS">SEE MORE</strong></a></div>
+		<div class="inner-box">
+			<div class="accordion-box area-tnc">
+				<div class="accordion-parent"><strong><span>ĐIỀU KIỆN & ĐIỀU KHOẢN</span></strong></div>
+				<div class="accordion-content">
+					<ol>
+						<li>Chương trình dành cho tất cả thành viên Việt Nam tại M88
+							<table>
+								<thead>
+									<tr>
+										<th>Thời gian khuyến mãi (GMT+8)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>01/03/2023 00:00:00 đến 31/12/2023 23:59:59</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>				
+						<li>Trong thời gian diễn ra, thành viên tham gia cược tại Esports sẽ nhận được vé bốc thăm trúng các giải thưởng hàng tháng theo bảng sau:		
+							<table>
+								<thead>
+									<tr>
+										<th rowspan="2">Số người chiến thắng</th>
+										<th rowspan="2">Giải Thưởng</th>
+										<th>Quy đổi giải thưởng (VND)</th>
+									</tr>
+									<tr>
+										<th>cần cược 1 vòng</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>12GB Card màn hình đồ họa - RTX 3060 </td>
+										<td>5,175</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>Chơi DOTA 2 với đội Talon</td>
+										<td>2,875</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>Tai nghe không dây STEELSERIES ARCTIS 1</td>
+										<td>1,150</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>Thẻ quà tặng STEAM 1,150 VND</td>
+										<td>575</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Áo thi đấu đội Talon</td>
+										<td>230</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>Thẻ quà tặng (STEAM/RIOT/GARENA) 230 VND</td>
+										<td>115</td>
+									</tr>
+								</tbody>
+							</table>			
+						** Vé hợp lệ sẽ được cập nhật vào lúc 12g trưa ngày tiếp theo (GMT+8)<br><br>		
+						Làm sao để có được vé bốc thăm:	
+							<ul>	
+								<li>+ 1 vé bốc thăm cho mỗi giao dịch nạp tiền thành công 230 VND </li>		
+								<li>+ 1 vé bốc thăm cho mỗi vé cược 115 VND tại Esports		</li>
+								<li>+ 1 vé bốc thăm cho mỗi vé cược 115 VND tại các sản phẩm khác của M88	</li>	
+								<li>+ 5 vé bốc thăm khi giới thiệu bạn chơi hợp lệ (Tài khoản hợp lệ là tài khoản mới, chưa từng đăng ký tại M88)</li>
+							</ul>
+						</li>
+						<li>Sau khi đăng nhập, thành viên nhấp "NHẬN NGAY" để đăng ký tham gia trước khi chương trình kết thúc. M88 sẽ không tái cập nhật tiền thưởng với bất kỳ lý do gì.</li>		
+						<li>Tiền cược thật và các vé đã thanh toán hoàn tất mới được tính vào chương trình này. Tất cả cược hòa/hoà hoàn tiền/hoàn lại/từ chối /vô hiệu/bị hủy và loại cược DEC có tỷ lệ dưới 1.50 (Malay tỷ lệ 0.50; HK tỷ lệ 0.50; Indo tỷ lệ -2.00) sẽ không tính vào doanh thu và/hoặc tiền tái đặt cược (nếu có áp dụng).	</li>	
+						<li>Tiền thưởng cần trải qua 1 vòng cược tại Esports trước khi tiến hành rút tiền.	</li>	
+						<li>Tiền thưởng sẽ được cập nhật vào tài khoản trong vòng 5 ngày sau khi kết thúc và có thời hạn sử dụng trong 5 ngày.	</li>	
+						<li>M88 sẽ liên hệ thành viên may mắn trúng giải thưởng ngay sau khi kết thúc, trường hợp không liên lạc thành công, giải thưởng sẽ bị huỷ bỏ vô điều kiện.		</li>
+						<li>Số vòng tái đặt cược yêu cầu cần đạt được trong vòng 7 ngày để tránh việc tiền thưởng và tiền thắng cược bị hủy.	</li>	
+						<li>Tiền thưởng sẽ tự động hết hiệu lực khi không còn cược đang chạy và số dư tại M Thể Thao dưới 10 VND.	</li>	
+						<li><a class="link" href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.vi-VN" target="_blank">Các quy định chung của chương trình khuyến mãi được áp dụng</a>.</li>		
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="inner-box">
+			<div class="footer-text">
+				<p>JADILAH YANG PALING ATAS!<br>Ingat, semakin tinggi peringkat, semakin besar hadiahnya!</p>
+			</div>
+		</div> -->
+	</div>
+</div>
+<footer id="footer">
+	<div class="row1-wrapper">
+		<div class="inner-box">
+			<div class="row-flex row-1">
+				<div class="sec sec-1">
+					<span class="po-label">Payment Options</span>
+					<div class="po-list">
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay-colored.svg" /></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="sec sec-3">
+					<div class="social-list">
+						<div class="img-box">
+							<a href="https://twitter.com/M88_VIETNAM" target="_blank">
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter-colored.svg"></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="https://www.youtube.com/channel/UCMJ7sxvxcDowyTrQQvMSciw" target="_blank">
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube-colored.svg"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner-box">
+		<div class="row-2 provider-list">
+			<div class="inner">
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-opus.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-opus-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-ag.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-ag-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-sabasport.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-sabasport-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech-colored.svg"></div>
+					</div>
+				</div>
+				<!-- <div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-netent.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-netent-colored.svg"></div>
+					</div>
+				</div> -->
+			</div>			
+		</div>
+
+	</div>
+	<div class=" row-flex row-3">
+		<div class="inner-box">
+			<div class="sec sec-1">
+				<div class="sponsors-list">
+					<div class="spon-blurb laliga">
+						<img src="assets/images/footer/icon-laliga.svg">
+						<div class="txt-area">
+							<div class="name white"><strong>Official Regional Partner</strong></div>
+							<div class="year white">2020 - 2024</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-bournemouth.svg">
+						<div class="txt-area">
+							<div class="name"><strong>AFC BOURNEMOUTH</strong></div>
+							<div class="year">2016 - 2020</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-crystalpalace.svg">
+						<div class="txt-area">
+							<div class="name"><strong>CRYSTAL PALACE</strong></div>
+							<div class="year">2015 - 2017</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-manchester.svg">
+						<div class="txt-area">
+							<div class="name"><strong>MANCHESTER CITY</strong></div>
+							<div class="year">2011 - 2012</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-tottenham.svg">
+						<div class="txt-area">
+							<div class="name"><strong>TOTTENHAM HOTSPURS</strong></div>
+							<div class="year">2006 - 2010</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row4-wrapper">
+		<div class="inner-box">
+			<div class=" row-flex row-4">
+				<div class="sec sec-3">
+					<p>M88 is committed to supporting <a href="https://help.m88.com/responsibleGaming_vn.asp" class="link">Responsible Gaming</a></p>
+				</div>
+				<!-- <div class="sec sec-2">
+					<div class="partners-list">
+						<img src="assets/images/footer/icon-ga.svg">
+						<img src="assets/images/footer/icon-itech.svg">
+					</div>
+				</div> -->
+				<div class="sec sec-4">
+					<img class="ga" src="assets/images/footer/ga.svg">
+					<img class="itech" src="assets/images/footer/itech.svg">
+					<img class="18" src="assets/images/footer/18.svg">
+					<span class="copyright">M88.com 2022</span>
+					<!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
+				</div>
+			</div>
+			<div class="sec row-5">
+				<p>Terms and Conditions apply. Please refer to the promotions page for more details.</p>
+				<p>M88.com uses certain browser cookies to ensure you receive the best gaming experience. By accessing and continuing to use the site you accept the use of these cookies. For information on our use of cookies and how to prevent them please refer to M88´s <strong> <u><a href="https://help.m88.com/termOfUse_tc_vn.asp">terms of use</a></u></strong></p>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="area-popup popup-search-rank">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">close</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1">
+					<strong class="msg msg-default">SỐ VÉ CỦA TÔI</strong>
+					<strong class="msg msg-invalid">Xin chào <span class="un"></span></strong>
+				</div>
+				<div class="txt-2">
+					<div class="msg msg-default">Điền tên đăng nhập để kiểm tra số vé rút thăm của bạn.</div>
+					<div class="msg msg-invalid">Chúng tôi không tìm thấy tên đăng nhập của bạn.<br>
+					Hoặc bạn cung cấp TÊN ĐĂNG NHẬP chưa đúng</div>
+				</div>
+				<form id="form" class="area-form" onsubmit="submitRankSearchForm(this);return false;">
+					<div class="field-area">
+						<label for="reg-name"><strong>Tên Đăng Nhập</strong></label>
+						<div class="field"><input type="text" name="un" data-required="true" /></div>
+					</div>
+					<button type="submit" role="button" class="btn">GỬI</button>
+					<div class="wrap-btn-cancel"><a role="button" class="btn-cancel" onclick="closePopup()"><strong>HUỶ</strong></a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="area-popup popup-search-rank-result">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">close</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1"><strong>Bạn đang có <span class="highlight rank-result"></span> vé rút thăm</strong></div>
+				<a role="button" class="btn" onclick="closePopup()">ĐÓNG</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+</html>

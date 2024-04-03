@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>M88</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+<link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.plugin.min.js"></script>
+<!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
+<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+<script type="text/javascript" src="assets/js/papaparse.min.js"></script>
+</head>
+<body>
+<header id="header" onclick="hid__grp()">
+	<div class="inner-box">
+		<div class="row">
+			<div class="col col-1">
+				<a href="index.html">
+					<picture>
+					   <source srcset="assets/images/mlogo-mobile.svg" media="(max-width: 767px)">
+					   <source srcset="assets/images/mlogo-desktop.svg" media="(min-width: 768px)">
+					   <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
+					</picture>
+				</a>
+			</div>
+			<div class="col col-2">
+				<a class="btn" role="button" onclick="openSearchRankPopup();">我的抽奖券</a>
+				<div class="header__langs">
+					<div class="sel-lang"><img src="assets/images/flags/cn.svg"><small class="langs">Chinese Yuan (CNY)</small><span></span></div>
+					<ul>
+						<li class="option-hover"><img src="assets/images/flags/en.svg"><span class="spc-sm">English</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index.html">Malaysian Ringgit<br><small>(MYR)</small></a>
+								<a href="index-inr.html">Indian Rupee <small>(INR)</small></a>
+							</div>
+						</div>
+						<li class="option-hover"><img src="assets/images/flags/cn.svg"><span class="spc-sm">简体中文</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index-cn.html">Chinese Yuan <small>(CNY)</small></a>
+								<a href="index-mycn.html">Malaysian Ringgit <br><small>(MYR)</small></a>
+							</div>
+						</div>
+						<li><a href="index-th.html"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
+						<li><a href="index-id.html"><img src="assets/images/flags/id.svg"><span>Bhs Indonesia <small>(IDR)</small></span></a></li>
+						<li><a href="index-vn.html"><img src="assets/images/flags/vn.svg"><span>Tiếng Việt <small>(VND)</small></span></a></li>
+						<li><a href="index-kr.html"><img src="assets/images/flags/kr.svg"><span>Korean <small>(KRW)</small></span></a></li>
+						<li><a href="index-jp.html"><img class="jpflag" src="assets/images/flags/jpy.svg"><span>Japanese <small>(USD)</small></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" onclick="hid__grp()">
+	<div class="container">
+		<div class="coins">
+			<img class="coins-desk" src="assets/images/coins.png">
+			<img class="coins-mobi" src="assets/images/coins-mobi.png">
+		</div>
+		<div class="timer-container"></div>
+		<div class="inner-box inner-box-ledger">
+			<table class="ledger">
+				<caption>
+					<div class="row">
+						<div class="col col-1">
+							<div class="row"><span class="col col-1">决战电竞每月送豪礼</span></div>
+							<!-- <div class="row"><span class="col loi-krathong"></span></div> -->
+							<span class="line"></span>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="promo-timer">
+							<span class="timer-label">优惠期间</span>
+							<div class="countdown">
+								<div class="num-row">
+									<div class="num-col col-days">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-hour">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-min">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-sec">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</caption>
+				<thead>
+					<tr>
+						<th><span>排名</span></th>
+						<th><span>用户名</span></th>
+						<th><span>门票数量</span></th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div class="wrap-show-more"><a role="button" class="btn-show-more"><strong data-less="SEE LESS">SEE MORE</strong></a></div>
+		<div class="inner-box">
+			<div class="accordion-box area-tnc">
+				<div class="accordion-parent"><strong><span>规则与条款:</span></strong></div>
+				<div class="accordion-content">
+					<ol>
+						<li>此优惠面向所有M88会员。
+							<table>
+								<thead>
+									<tr>
+										<th>活动期间 (GMT+8)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2023年3月1日 00:00:00至2023年12月31日 23:59:59</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>				
+						<li>活动期间, 会员投注于M88电竞-全部产品,  即可获得幸运抽奖券, 有机会赢得每月大奖, 详情如下:
+							<table>
+								<thead>
+									<tr>
+										<th rowspan="2">名额</th>
+										<th rowspan="2">奖项</th>
+										<th>可兑换免费投注</th>
+									</tr>
+									<tr>
+										<th>1倍流水(元)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>12GB GRAPHICS CARD显示卡-RTX 3060 </td>
+										<td>1508</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>DOTA2 TALON 塔龙队进行游戏</td>
+										<td>838</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>STEELSERIES ARCTIS 1 赛睿蓝牙电竞耳机</td>
+										<td>335</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>335元 STEAM 礼物卡 </td>
+										<td>168</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>TALON 队服</td>
+										<td>67</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>67元 礼物卡 (STEAM/RIOT/GARENA) </td>
+										<td>34</td>
+									</tr>
+								</tbody>
+							</table>				
+						**抽奖券将于次日中午 12 :00 (GMT+8) 后发放<br><br>
+						如何赚取抽奖券:
+						<ul>	
+							<li>+1抽奖券每单笔存款达67元	</li>	
+							<li>+1抽奖券每次有效投注达33.5元投注于M88电竞产品	</li>	
+							<li>+1抽奖券每次有效投注达33.5元投注于其他M88产品	</li>	
+							<li>+5抽奖券介绍朋友注册会员 (仅限新会员)</li>
+						</ul></li>
+						<li>会员需点击 "选择参加" 按钮（登录后）申请并提交，我们将不接受任何要求的奖金补发。</li>	
+						<li>仅计算“真钱投注”和已结算的合格投注。 所有平局/退款/拒绝/无效/取消的投注，以及赔率低于 1.50 的投注（马来赔率 0.50；香港赔率 0.50；印度赔率 -2.00）将不包括在有效合格投注和/或流水要求的计算中（如适用）。</li>		
+						<li>免费投注需1倍流水投注于 "电竞" 即可申请提款</li>	
+						<li>免费投注将会在优惠活动结束后5天内自动派发到您的钱包。 未使用奖金将在成功派发的5天后自动过期。</li>		
+						<li>M88客服将于活动结束后的 5 天内联系获奖者。 如无法联系到获奖者，奖品将视同放弃</li>		
+						<li>会员必须在7天内完成有效投注额要求，否则系统将自动清除赢利和红利奖金。	</li>	
+						<li>当已无未结算注单， 且在明陞体育的余额低于5元时, 奖金将自动到期。	</li>	
+						<li><a class="link" href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.zh-CN" target="_blank">一般条款及规则应用于此优惠</a>。</li>	
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="inner-box">
+			<div class="footer-text">
+				<p>JADILAH YANG PALING ATAS!<br>Ingat, semakin tinggi peringkat, semakin besar hadiahnya!</p>
+			</div>
+		</div> -->
+	</div>
+</div>
+<footer id="footer">
+	<div class="row1-wrapper">
+		<div class="inner-box">
+			<div class="row-flex row-1">
+				<div class="sec sec-1">
+					<span class="po-label">Payment Options</span>
+					<div class="po-list">
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay-colored.svg" /></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="sec sec-3">
+					<div class="social-list">
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter-colored.svg"></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube-colored.svg"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner-box">
+		<div class="row-2 provider-list">
+			<div class="inner">
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-opus.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-opus-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-ag.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-ag-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-sabasport.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-sabasport-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech-colored.svg"></div>
+					</div>
+				</div>
+				<!-- <div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-netent.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-netent-colored.svg"></div>
+					</div>
+				</div> -->
+			</div>			
+		</div>
+
+	</div>
+	<div class=" row-flex row-3">
+		<div class="inner-box">
+			<div class="sec sec-1">
+				<div class="sponsors-list">
+					<div class="spon-blurb laliga">
+						<img src="assets/images/footer/icon-laliga.svg">
+						<div class="txt-area">
+							<div class="name white"><strong>Official Regional Partner</strong></div>
+							<div class="year white">2020 - 2024</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-bournemouth.svg">
+						<div class="txt-area">
+							<div class="name"><strong>AFC BOURNEMOUTH</strong></div>
+							<div class="year">2016 - 2020</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-crystalpalace.svg">
+						<div class="txt-area">
+							<div class="name"><strong>CRYSTAL PALACE</strong></div>
+							<div class="year">2015 - 2017</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-manchester.svg">
+						<div class="txt-area">
+							<div class="name"><strong>MANCHESTER CITY</strong></div>
+							<div class="year">2011 - 2012</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-tottenham.svg">
+						<div class="txt-area">
+							<div class="name"><strong>TOTTENHAM HOTSPURS</strong></div>
+							<div class="year">2006 - 2010</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row4-wrapper">
+		<div class="inner-box">
+			<div class=" row-flex row-4">
+				<div class="sec sec-3">
+					<p>M88 is committed to supporting <a href="https://help.m88.com/responsibleGaming_cs.asp" class="link">Responsible Gaming</a></p>
+				</div>
+				<!-- <div class="sec sec-2">
+					<div class="partners-list">
+						<img src="assets/images/footer/icon-ga.svg">
+						<img src="assets/images/footer/icon-itech.svg">
+					</div>
+				</div> -->
+				<div class="sec sec-4">
+					<img class="ga" src="assets/images/footer/ga.svg">
+					<img class="itech" src="assets/images/footer/itech.svg">
+					<img class="18" src="assets/images/footer/18.svg">
+					<span class="copyright">M88.com 2022</span>
+					<!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
+				</div>
+			</div>
+			<div class="sec row-5">
+				<p>Terms and Conditions apply. Please refer to the promotions page for more details.</p>
+				<p>M88.com uses certain browser cookies to ensure you receive the best gaming experience. By accessing and continuing to use the site you accept the use of these cookies. For information on our use of cookies and how to prevent them please refer to M88´s <strong> <u><a href="https://help.m88.com/termOfUse_tc_cs.asp">terms of use</a></u></strong></p>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="area-popup popup-search-rank">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">关闭</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1">
+					<strong class="msg msg-default">我的抽奖券</strong>
+					<strong class="msg msg-invalid">您好 <span class="un"></span></strong>
+				</div>
+				<div class="txt-2">
+					<div class="msg msg-default">请在下列输入用户名, 以确认您目前的抽奖券数量。</div>
+					<div class="msg msg-invalid">很遗憾，我们查询不到您的用户名。<br>
+						或者您可能输入了错误的用户名。</div>
+				</div>
+				<form id="form" class="area-form" onsubmit="submitRankSearchForm(this);return false;">
+					<div class="field-area">
+						<label for="reg-name"><strong>用户名</strong></label>
+						<div class="field"><input type="text" name="un" data-required="true" /></div>
+					</div>
+					<button type="submit" role="button" class="btn">提交</button>
+					<div class="wrap-btn-cancel"><a role="button" class="btn-cancel" onclick="closePopup()"><strong>取消</strong></a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="area-popup popup-search-rank-result">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">关闭</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1"><strong>您目前有 <span class="highlight rank-result"></span> 张抽奖券</strong></div>
+				<a role="button" class="btn" onclick="closePopup()">关闭</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+</html>

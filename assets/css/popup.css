@@ -1,0 +1,257 @@
+body.popup-active {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+body.popup-active:after {
+	content: "";
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 990;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.75);
+}
+.area-popup {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 991;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+body.popup-active .area-popup.active {
+	display: block;
+}
+.area-popup > .inner-box {
+	margin-top: 128px;
+	text-align: center;
+}
+.popup {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 20px;
+	border-radius: 2px;
+	text-align: left;
+	background-color: #1a2332;
+}
+.popup-search-rank-result .popup {
+	max-width: 720px;
+	width: 100%;
+}
+.popup .popup-head {
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+.popup .popup-head > .inner-box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 100%;
+}
+.popup .popup-head .btn-close {
+	display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/icon-close-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+	cursor: pointer;
+	margin: 10px;
+}
+.popup .popup-content {
+	padding: 50px 77px 48px;
+	color: #fff;
+}
+.popup-search-rank .popup {
+	max-width: 610px;
+	width: 100%;
+}
+.popup-search-rank .popup .popup-content .msg {
+	display: none;
+}
+.popup-search-rank .popup .popup-content .msg-default:not(.inactive) {
+	display: block;
+}
+.popup-search-rank .popup .popup-content .msg.inactive + .msg-invalid {
+	display: block;
+}
+.popup-search-rank .popup .popup-content .msg {
+	display: none;
+}
+.popup-search-rank-result .popup .popup-content {
+	max-width: 448px;
+	margin: 0 auto;
+	padding: 42px 16px 36px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.popup .popup-content a {
+	color: #000;
+}
+.popup .popup-content .txt-1 {
+	height: 22px;
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+.popup-search-rank-result .popup .popup-content .txt-1 {
+	height: 25px;
+	font-size: 16px;
+	margin-bottom: 36px;
+}
+.popup .popup-content .txt-2 {
+	line-height: 22px;
+	font-size: 12px;
+	margin-bottom: 42px;
+}
+.popup .popup-content .btn {
+	width: 100%;
+	margin-bottom: 16px;
+	cursor: pointer;
+	padding: 5px;
+}
+.popup .popup-content [type="submit"].btn:not(.active) {
+    background-color: #d0d0d0;
+    color: #1a2332;
+    pointer-events: none;
+}
+.popup-search-rank-result .popup .popup-content .btn {
+	margin-bottom: 0;
+}
+.popup .popup-content .area-form .field-area {
+    position: relative;
+    margin-bottom: 32px;
+}
+.popup .popup-content .area-form .field-area .field {
+    position: relative;
+}
+.popup .popup-content .area-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 16px;
+    height: 20px;
+    line-height: 25px;
+}
+.popup .popup-content .area-form input[type="text"] {
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	width: 100%;
+	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-radius: 2px;
+	background-color: #fff;
+	border: solid 1px #b5b5b5;
+	padding: 0 8px;
+	color: #000;
+	outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 5000s ease-in-out 0s;
+}
+.popup .popup-content .area-form input[type="text"]::-webkit-input-placeholder {
+	color: #b5b5b5;
+}
+.popup .popup-content .area-form input[type="text"]::-moz-placeholder {
+	color: #b5b5b5;
+	opacity:  1;
+}
+.popup .popup-content .area-form input[type="text"]:-ms-input-placeholder {
+	color: #b5b5b5;
+}
+.popup .popup-content .area-form input[type="text"]::-ms-input-placeholder {
+	color: #b5b5b5;
+}
+.popup .popup-content .area-form input[type="text"]::placeholder {
+	color: #b5b5b5;
+}
+.popup .popup-content .area-form .field-area.validated .field input[type="text"] {
+	padding-right: 38px;
+}
+.popup .popup-content .area-form .field-area.success .field input[type="text"] {
+	border-bottom: 3px solid #2d8c44;
+}
+.popup .popup-content .area-form .field-area.error .field input[type="text"], .popup-register .area-form .field-area.error .dropdown-box .dropdown-selected {
+	border-bottom: 3px solid #bc1f00;
+}
+.popup .popup-content .area-form .validation-txt {
+	display: none;
+	height: 32px;
+	line-height: 32px;
+	color: #fff;
+	font-size: 12px;
+	padding: 0 8px;
+	border-radius: 2px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.popup .popup-content .area-form .field-area.error .validation-txt {
+	display: none;
+	background-color: rgba(228,228,228,0.6);
+	color: #bc1f00;
+}
+.popup .popup-content .area-form .field-area.validated .field:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 8px;
+	top: 20px;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.popup .popup-content .area-form .field-area.success .field:after {
+	background-image: url(../images/check-successful-green.svg);
+}
+.popup .popup-content .area-form .field-area.error .field:after {
+	background-image: url(../images/exclamation-error-red.svg);
+}
+.popup .popup-content .wrap-btn-cancel {
+	text-align: center;
+}
+.popup .popup-content .wrap-btn-cancel .btn-cancel {
+	text-decoration: underline;
+	font-size: 14px;
+	color: #fff;
+}
+@media (max-width: 767px) {
+	.area-popup > .inner-box {
+		margin-top: 92px;
+	}
+	.popup .popup-content {
+		padding: 36px 16px 22px;
+	}
+	.popup-search-rank-result .popup .popup-content {
+		padding: 32px 16px;
+	}
+	.popup-search-rank-result .popup .popup-content .txt-1 {
+		margin-bottom: 24px;
+	}
+	.popup .popup-content .area-form .field-area {
+		margin-bottom: 24px;
+	}
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>M88</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+<link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.plugin.min.js"></script>
+<!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
+<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+<script type="text/javascript" src="assets/js/papaparse.min.js"></script>
+</head>
+<body>
+<header id="header" onclick="hid__grp()">
+	<div class="inner-box">
+		<div class="row">
+			<div class="col col-1">
+				<a href="index.html">
+					<picture>
+					   <source srcset="assets/images/mlogo-mobile.svg" media="(max-width: 767px)">
+					   <source srcset="assets/images/mlogo-desktop.svg" media="(min-width: 768px)">
+					   <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
+					</picture>
+				</a>
+			</div>
+			<div class="col col-2">
+				<a class="btn" role="button" onclick="openSearchRankPopup();">TIKET SAYA</a>
+				<div class="header__langs">
+					<div class="sel-lang"><img src="assets/images/flags/id.svg"><small class="langs">Bhs Indonesia</small><span></span></div>
+					<ul>
+						<li class="option-hover"><img src="assets/images/flags/en.svg"><span class="spc-sm">English</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index.html">Malaysian Ringgit<br><small>(MYR)</small></a>
+								<a href="index-inr.html">Indian Rupee <small>(INR)</small></a>
+							</div>
+						</div>
+						<li class="option-hover"><img src="assets/images/flags/cn.svg"><span class="spc-sm">简体中文</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index-cn.html">Chinese Yuan <small>(CNY)</small></a>
+								<a href="index-mycn.html">Malaysian Ringgit <br><small>(MYR)</small></a>
+							</div>
+						</div>
+						<li><a href="index-th.html"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
+						<li><a href="index-id.html"><img src="assets/images/flags/id.svg"><span>Bhs Indonesia <small>(IDR)</small></span></a></li>
+						<li><a href="index-vn.html"><img src="assets/images/flags/vn.svg"><span>Tiếng Việt <small>(VND)</small></span></a></li>
+						<li><a href="index-kr.html"><img src="assets/images/flags/kr.svg"><span>Korean <small>(KRW)</small></span></a></li>
+						<li><a href="index-jp.html"><img class="jpflag" src="assets/images/flags/jpy.svg"><span>Japanese <small>(USD)</small></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" onclick="hid__grp()">
+	<div class="container">
+		<div class="coins">
+			<img class="coins-desk" src="assets/images/coins.png">
+			<img class="coins-mobi" src="assets/images/coins-mobi.png">
+		</div>
+		<div class="timer-container"></div>
+		<div class="inner-box inner-box-ledger">
+			<table class="ledger">
+				<caption>
+					<div class="row">
+						<div class="col col-1">
+							<div class="row"><span class="col col-1">PAPAN PERINGKAT</span></div>
+							<div class="row"><span class="col loi-krathong">TURNAMEN ESPORTS GIVEAWAY</span></div>
+							<span class="line"></span>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="promo-timer">
+							<span class="timer-label">Durasi Promo</span>
+							<div class="countdown">
+								<div class="num-row">
+									<div class="num-col col-days">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-hour">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-min">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-sec">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</caption>
+				<thead>
+					<tr>
+						<th><span>PERINGKAT</span></th>
+						<th><span>USERNAME</span></th>
+						<th><span>Jumlah Tiket</span></th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div class="wrap-show-more"><a role="button" class="btn-show-more"><strong data-less="SEE LESS">SEE MORE</strong></a></div>
+		<div class="inner-box">
+			<div class="accordion-box area-tnc">
+				<div class="accordion-parent"><strong><span>Syarat & Ketentuan</span></strong></div>
+				<div class="accordion-content">
+					<ol>
+						<li>Promosi ini berlaku untuk seluruh member di M88.
+							<table>
+								<thead>
+									<tr>
+										<th>PERIODE PROMOSI (GMT+8)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>01 Maret 2023 00:00:00 - 31 Desember 2023 23:59:59</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>		
+						<li>Selama masa periode promosi, member yang bermain di semua Esports  akan mendapatkan tiket raffle & menangkan Hadiah Eksklusif  Setiap Bulan sesuai tabel berikut.	
+							<table>
+								<thead>
+									<tr>
+										<th rowspan="2">Jumlah pemenang</th>
+										<th rowspan="2">Hadlah</th>
+										<th>Penukaran hadiah ke</th>
+									</tr>
+									<tr>
+										<th>Freebet dengan 1x RO</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>12GB GRAPHICS CARD - RTX 3060</td>
+										<td>3,375</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>MAIN DOTA 2 DENGAN TIM TALON</td>
+										<td>1,875</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>STEELSERIES ARCTIS 1 WIRELESS HEADSET</td>
+										<td>750</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>MYR 210 STEAM GIFT CARD</td>
+										<td>375</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>TALON TIM JERSEY</td>
+										<td>150</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>MYR 42 GIFT CARD (STEAM/RIOT/GARENA) </td>
+										<td>75</td>
+									</tr>
+								</tbody>
+							</table>		
+						**Tiket raffle akan dikreditkan pada hari berikutnya pukul 12:00 (GMT+8)<br><br>
+						Cara mendapatkan tiket raffle:
+						<ul> 	
+							<li>+1 Tiket untuk setiap deposit minimum IDR 150</li>
+							<li>+1 Tiket untuk setiap turnover IDR 75 pada produk Esports </li>	
+							<li>+1 Tiket untuk setiap turnover IDR 75 pada produk M88 lainnya 	</li>
+							<li>+5 Tiket jika member mereferensikan teman (hanya untuk anggota baru)</li>
+						</ul>
+						</li>	
+						<li>Klaim promosi ini dengan klik pada tombol "OPT-IN" (Setelah Login) dan kirimkan sebelum masa promosi berakhir. Kami tidak akan mengkreditkan bonus untuk periode yang sudah terlewatkan.</li>	
+						<li>Hanya "Real Cash" dan taruhan yang memenuhi syarat yang akan diperhitungkan dalam bonus dan rollover. Semua taruhan seri / pengembalian dana / ditolak / dibatalkan, taruhan dengan odds decimal di bawah 1,50 (Odds Malay 0,50; Odds HK 0,50; Indo Odds -2.00) tidak akan dimasukkan dalam perhitungan persyaratan turnover &/atau rollover (bila berlaku).</li>	
+						<li>Freebet harus diputar sebanyak 1x Rollover di " ESPORTS" sebelum penarikan dapat dilakukan.	</li>
+						<li>Bonus akan dikreditkan dalam waktu 5 hari setelah periode promosi berakhir. Dana bonus akan hangus jika tidak digunakan sama sekali dalam waktu 5 hari setelah bonus berhasil dikreditkan. </li>	
+						<li>Setelah masa promosi berakhir Costumer Service akan menghubungi member dalam waktu 5 hari untuk proses pengiriman, jika pemenang tidak bisa dihubungi dalam waktu tersebut maka hadiah akan terhitung hangus. </li>	
+						<li>Ketentuan rollover harus dipenuhi dalam waktu 7 hari setelah dana bonus dikreditkan. Jika tidak, maka bonus dan dana kemenangan akan dibatalkan.</li>	
+						<li>Bonus freebet akan secara otomatis dibatalkan setelah tidak ada taruhan yang tertunda atau saldo MSPORTS kurang dari IDR 10.	</li>
+						<li><a class="link" href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.id-ID" target="_blank">Syarat & ketentuan umum promosi berlaku</a>.</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="inner-box">
+			<div class="footer-text">
+				<p>JADILAH YANG PALING ATAS!<br>Ingat, semakin tinggi peringkat, semakin besar hadiahnya!</p>
+			</div>
+		</div> -->
+	</div>
+</div>
+<footer id="footer">
+	<div class="row1-wrapper">
+		<div class="inner-box">
+			<div class="row-flex row-1">
+				<div class="sec sec-1">
+					<span class="po-label">Payment Options</span>
+					<div class="po-list">
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay-colored.svg" /></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="sec sec-3">
+					<div class="social-list">
+						<div class="img-box">
+							<a href="https://twitter.com/M88Indo" target="_blank">
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter-colored.svg"></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="https://www.youtube.com/channel/UCp861DzoOkrBkDx6RxrDi-Q" target="_blank">
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube-colored.svg"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner-box">
+		<div class="row-2 provider-list">
+			<div class="inner">
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-opus.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-opus-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-ag.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-ag-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-sabasport.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-sabasport-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech-colored.svg"></div>
+					</div>
+				</div>
+				<!-- <div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-netent.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-netent-colored.svg"></div>
+					</div>
+				</div> -->
+			</div>			
+		</div>
+
+	</div>
+	<div class=" row-flex row-3">
+		<div class="inner-box">
+			<div class="sec sec-1">
+				<div class="sponsors-list">
+					<div class="spon-blurb laliga">
+						<img src="assets/images/footer/icon-laliga.svg">
+						<div class="txt-area">
+							<div class="name white"><strong>Official Regional Partner</strong></div>
+							<div class="year white">2020 - 2024</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-bournemouth.svg">
+						<div class="txt-area">
+							<div class="name"><strong>AFC BOURNEMOUTH</strong></div>
+							<div class="year">2016 - 2020</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-crystalpalace.svg">
+						<div class="txt-area">
+							<div class="name"><strong>CRYSTAL PALACE</strong></div>
+							<div class="year">2015 - 2017</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-manchester.svg">
+						<div class="txt-area">
+							<div class="name"><strong>MANCHESTER CITY</strong></div>
+							<div class="year">2011 - 2012</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-tottenham.svg">
+						<div class="txt-area">
+							<div class="name"><strong>TOTTENHAM HOTSPURS</strong></div>
+							<div class="year">2006 - 2010</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row4-wrapper">
+		<div class="inner-box">
+			<div class=" row-flex row-4">
+				<div class="sec sec-3">
+					<p>M88 is committed to supporting <a href="https://help.m88.com/responsibleGaming_id.asp" class="link">Responsible Gaming</a></p>
+				</div>
+				<!-- <div class="sec sec-2">
+					<div class="partners-list">
+						<img src="assets/images/footer/icon-ga.svg">
+						<img src="assets/images/footer/icon-itech.svg">
+					</div>
+				</div> -->
+				<div class="sec sec-4">
+					<img class="ga" src="assets/images/footer/ga.svg">
+					<img class="itech" src="assets/images/footer/itech.svg">
+					<img class="18" src="assets/images/footer/18.svg">
+					<span class="copyright">M88.com 2022</span>
+					<!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
+				</div>
+			</div>
+			<div class="sec row-5">
+				<p>Terms and Conditions apply. Please refer to the promotions page for more details.</p>
+				<p>M88.com uses certain browser cookies to ensure you receive the best gaming experience. By accessing and continuing to use the site you accept the use of these cookies. For information on our use of cookies and how to prevent them please refer to M88´s <strong> <u><a href="https://help.m88.com/termOfUse_tc_id.asp">terms of use</a></u></strong></p>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="area-popup popup-search-rank">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">close</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1">
+					<strong class="msg msg-default">Tiket Saya</strong>
+					<strong class="msg msg-invalid">Halo <span class="un"></span></strong>
+				</div>
+				<div class="txt-2">
+					<div class="msg msg-default">Untuk memeriksa total tiket, Anda cukup ketik username pada kolom di bawah ini.</div>
+					<div class="msg msg-invalid">Kami tidak dapat melihat username Anda.<br>
+					atau Anda mungkin memasukan username yang SALAH.</div>
+				</div>
+				<form id="form" class="area-form" onsubmit="submitRankSearchForm(this);return false;">
+					<div class="field-area">
+						<label for="reg-name"><strong>Username</strong></label>
+						<div class="field"><input type="text" name="un" data-required="true" /></div>
+					</div>
+					<button type="submit" role="button" class="btn">OK</button>
+					<!-- <div class="wrap-btn-cancel"><a role="button" class="btn-cancel" onclick="closePopup()"><strong>Batal</strong></a></div> -->
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="area-popup popup-search-rank-result">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">close</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1"><strong>Anda memiliki <span class="highlight rank-result"></span> raffle tiket.</strong></div>
+				<a role="button" class="btn" onclick="closePopup()">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+</html>

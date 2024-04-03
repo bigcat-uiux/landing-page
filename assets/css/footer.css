@@ -1,0 +1,500 @@
+@charset "utf-8";
+#footer {
+	background: #222939;
+	padding: 24px 0 0;
+	font-size: 12px;
+	color: #b5b5b5;
+}
+#footer .row-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#footer a {
+	color: #b5b5b5;
+}#footer a {
+	color: #b5b5b5;
+}
+#footer .link {
+    font-family: 'Lato';
+    line-height: 12px;
+    display: inline-block;
+}
+#footer a:hover, #footer .link:hover {
+    color: #fff;
+}
+#footer .img-box {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+#footer .img-box .img-holder:last-child {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	overflow: hidden;
+	/* width: 0%; */
+	opacity: 0;
+	transition: opacity 0.8s;
+}
+#footer .img-box:hover .img-holder:last-child {
+	/* width: 100%; */
+	opacity: 100;
+}
+#footer .img-box .img-holder:last-child img {
+	max-width: 9999px;
+}
+.row1-wrapper {
+    background-color:#1a202c;
+	height: 112px;
+	/* padding-top: 45px; */
+    box-sizing: border-box;
+}
+/* .row-1:before {
+	width: 100vw;
+	height: 112px;
+	background-color: #1a202c;
+} */
+#footer .row-1 {
+	flex-wrap: wrap;
+	align-items: baseline;
+	padding-bottom: 22px;
+	/* text-align: center; */
+	padding-top: 44px;
+}
+#footer .row-1 .sec {
+	line-height: normal;
+}
+#footer .row-1 .sec-1, #footer .row-1 .sec-3 {
+	height: 26px;
+	line-height: 26px;
+}
+#footer .po-label {
+	margin-right: 16px;
+}
+#footer .po-list {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+#footer .po-list .img-box:not(:last-child) {
+	margin-right: 16px;
+}
+#footer .social-list {
+	font-size: 0;
+	width: 72px;
+}
+#footer .social-list > *:not(:last-child) {
+	margin-right: 8px;
+}
+#footer nav ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+#footer nav ul li {
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding: 0 9px;
+	line-height: 12px;
+}
+#footer nav ul li:first-child {
+	padding-left: 0;
+}
+#footer nav ul li:last-child {
+	padding-right: 0;
+}
+#footer nav ul li:not(:last-child):after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	width: 1px;
+	height: 13px;
+	background-color: #b5b5b5;
+}
+#footer .provider-list {
+	padding: 35px 13px;
+	margin: 0 -13px;
+    font-size: 0;
+    /* border-top: 1px dashed #b5b5b5; */
+    border-bottom: 1px solid #4e5461;
+	overflow: hidden;
+}
+#footer .provider-list > .inner {
+	margin: 0 -48px -24px 0;
+}
+#footer .provider-list .box {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 48px 24px 0;
+}
+#footer .provider-list img {
+	min-height: 40px;
+}
+#footer .row-3 {
+	padding-top: 30px;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
+#footer .row-3 .sec-1, #footer .row-3 .sec-2 {
+	margin-bottom: 45px;
+}
+#footer .sponsors-list {
+	display: flex;
+	justify-content: space-between;
+}
+#footer .sponsors-list .spon-blurb {
+	white-space: nowrap;
+}
+#footer .sponsors-list .spon-blurb:not(:last-child) {
+	margin-right: 48px;
+}
+#footer .sponsors-list .spon-blurb > * {
+	display: inline-block;
+	vertical-align: middle
+}
+#footer .sponsors-list .spon-blurb img {
+	margin-right: 16px;
+	min-height: 40px;
+}
+#footer .sponsors-list .spon-blurb .txt-area {
+	line-height: normal;
+}
+#footer .partners-list {
+	font-size: 0;
+}
+#footer .partners-list > *:not(:last-child) {
+	margin-right: 16px;
+}
+.row4-wrapper {
+    background-color:#1a202c;
+	/* height: 182px; */
+    box-sizing: border-box;
+	padding-top: 31px;
+}
+.sec-4 img {
+	padding-right: 16px;
+}
+.row-5 {
+	padding-top: 31px;
+}
+.row-5 p {
+	padding-bottom: 8px;
+}
+.footer-text {
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Lato';
+	font-weight: 700;
+	margin-top: 20px;
+	/* width: 90%; */
+}
+.white {
+	color: #fff;
+}
+.twitter-icon a {
+	width: 32px;
+	height: 32px;
+	border-radius: 6px;
+}
+.youtube-icon a {
+	width: 32px;
+	height: 32px;
+	border-radius: 6px;
+}
+/* .saba-logo {
+	height: 32px;
+} */
+.saba-logo {
+	width: 90%;
+}
+@media (max-width: 1366px) {
+	#footer .provider-list {
+		padding: 35px 16px;
+		margin: 0;
+		text-align: center;
+	}
+	.row-3 {
+		padding: 30px 16px 0 16px;
+	}
+	.row4-wrapper {
+		padding: 31px 16px 0 16px;
+	}
+	#footer .row-1 {
+		padding: 44px 22px 22px 16px;
+	}
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+	#footer .provider-list .box {
+		margin-right: calc((((((100vw - 1024px) * 100) / (1366 - 1024)) / 100) * (48 - 40)) + 40px);
+	}
+	#footer .sponsors-list .spon-blurb:not(:last-child) {
+		margin-right: calc((((((100vw - 1024px) * 100) / (1366 - 1024)) / 100) * (48 - 24)) + 24px);
+	}
+	#footer .sponsors-list .spon-blurb img {
+		margin-right: calc((((((100vw - 1024px) * 100) / (1366 - 1024)) / 100) * (16 - 8)) + 8px);
+	}
+	#footer .partners-list > *:not(:last-child) {
+		margin-right: calc((((((100vw - 1024px) * 100) / (1366 - 1024)) / 100) * (16 - 8)) + 8px);
+	}
+	
+}
+@media (min-width: 1024px) {
+	#footer .desktop-view {
+		display: none;
+	}
+	#footer .row-1 .sec-1 {
+		order: 1;
+		width: calc(100% - 60px);
+	}
+	#footer .row-1 .sec-2 {
+		order: 3;
+	}
+	#footer .row-1 .sec-3 {
+		order: 2;
+		width: 60px;
+		text-align: right;
+	}
+	#footer .row-1 .sec-4 {
+		order: 4;
+	}
+	#footer .row-3 .sec-3, #footer .row-3 .sec-4 {
+		width: 50%;
+	}
+	#footer .row-3 .sec-4 {
+		text-align: right;
+	}
+}
+@media (max-width: 1023px) {
+	#footer .desktop-view {
+		text-align: center;
+		padding-bottom: 27px;
+		border-bottom: 1px dashed #b5b5b5;
+	}
+	#footer .desktop-view .go-desktop-btn {
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: 32px;
+		background-image: url(../images/footer/icon-desktop-view.svg);
+		background-repeat: no-repeat;
+		background-position: left center;
+		min-height: 24px;
+		line-height: 24px;
+	}
+	#footer .row-1 {
+		display: block;
+		padding: 24px 0 32px;
+	}
+
+	.row1-wrapper {
+		height: unset;
+	}
+	#footer .social-list {
+		margin: 0 auto;
+	}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+	#footer .row-1 {
+		display: block;
+	}
+	#footer .row-1 .sec {
+		text-align: center;
+	}
+	#footer .row-1 .sec-1 {
+		margin-bottom: 24px;
+	}
+	#footer .row-1 .sec-2, #footer .row-1 .sec-3 {
+		margin-bottom: 16px;
+	}
+	#footer .nav-footer2 {
+		line-height: 12px;
+	}
+	#footer nav ul {
+		display: inline-flex;
+	}
+	#footer .provider-list {
+		padding: calc((((((100vw - 768px) * 100) / (1023 - 768)) / 100) * (35 - 27)) + 27px) 0;
+		margin: 0;
+	}
+	#footer .provider-list > .inner {
+		margin: 0 calc((44px - (((((100vw - 768px) * 100) / (1023 - 768)) / 100) * (44 - 40))) * -1) calc(((((((100vw - 768px) * 100) / (1023 - 768)) / 100) * (24 - 16)) + 16px) * -1) 0;
+	}
+	#footer .provider-list .box {
+		margin: 0 calc(44px - (((((100vw - 768px) * 100) / (1023 - 768)) / 100) * (44 - 40))) calc((((((100vw - 768px) * 100) / (1023 - 768)) / 100) * (24 - 16)) + 16px) 0;
+	}
+	#footer .provider-list img {
+		min-height: calc((((((100vw - 768px) * 100) / (1023 - 768)) / 100) * (40 - 24)) + 24px);
+	}
+	#footer .row-3 {
+		padding-top: 32px;
+		align-items: flex-start;
+	}
+	#footer .row-3 .sec-1 {
+		width: 100%;
+		/* border-bottom: 1px dashed #b5b5b5; */
+		padding-bottom: 32px;
+		margin-bottom: 32px;
+	}
+	#footer .row-3 .sec-2 {
+		margin-bottom: 0;
+	}
+	#footer .row-3 .sec-3 {
+		text-align: right;
+	}
+	#footer .row-3 .sec-4 {
+		width: 100%;
+		text-align: center;
+		padding-top: 32px;
+		margin-top: 32px;
+		border-top: 1px dashed #b5b5b5;
+	}
+	#footer .partners-list > *:not(:last-child) {
+		margin-right: 52px;
+	}
+	#footer .sponsors-list .spon-blurb:not(:last-child) {
+		margin-right: calc((((((100vw - 768px) * 100) / (1023 - 768)) / 100) * (24 - 16)) + 16px);
+	}
+	#footer .sponsors-list .spon-blurb img {
+		margin-right: 8px;
+	}
+}
+@media (min-width: 768px) {
+	#footer .po-label:after {
+		content: ":";
+	}
+}
+@media (max-width: 767px) {
+	#footer .row-flex {
+		display: block;
+	}
+	#footer .row-1 {
+		display: flex;
+		text-align: center;
+	}
+	#footer .row-1 .sec {
+		width: 100%;
+	}
+	#footer .row-1 .sec-1 {
+		order: 1;
+		margin-bottom :24px;
+	}
+	#footer .row-1 .sec-2 {
+		order: 3;
+	}
+	#footer .row-1 .sec-3 {
+		order: 2;
+	}
+	#footer .row-1 .sec-4 {
+		order: 4;
+	}
+	#footer .row-1 .sec-1, #footer .row-1 .sec-3 {
+		height: auto;
+		line-height: normal;
+	}
+	#footer .row-1 nav ul {
+		display: block;
+	}
+	#footer .row-1 nav ul li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 16px;
+	}
+	#footer .row-1 .nav-footer2 {
+		margin-bottom: -16px;
+	}
+	#footer .po-label {
+		display: block;
+		margin: 0 0 16px;
+	}
+	#footer .po-list {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: -16px;
+	}
+	#footer .po-list .img-box, #footer .po-list .img-box:not(:last-child) {
+		margin: 0 12px 16px;
+	}
+	#footer .provider-list > .inner {
+		margin: 0;
+	}
+	#footer .provider-list .box {
+		width: 33.33%;
+		margin: 0 0 calc((((((100vw - 375px) * 100) / (768 - 375)) / 100) * (24 - 16)) + 16px);
+	}
+	#footer .provider-list .box {
+		text-align: center;
+	}
+	#footer .provider-list img {
+		/* min-height: calc((((((100vw - 375px) * 100) / (768 - 375)) / 100) * (40 - 24)) + 24px); */
+		min-height: 32px;
+	}
+	#footer .row-3 {
+		display: block;
+		text-align: center;
+		padding-top: 0;
+	}
+	#footer .row-3 .sec-1 {
+		/* border-bottom: 1px dashed #b5b5b5; */
+		padding: 27px 0;
+		margin: 0;
+	}
+	#footer .row-3 .sec-2 {
+		padding: 27px 0;
+		margin: 0;
+	}
+	#footer .row-3 .sec-3 {
+		line-height: 12px;
+		margin-bottom: 18px;
+	}
+	.row4-wrapper {
+		/* height: 228px; */
+	}
+	.row-4 {
+		text-align: center;
+	}
+	.row-4 .sec-4 {
+		display: block;
+	}
+	.row-5 {
+		text-align: center;
+	}
+	#footer .sponsors-list, #footer .partners-list {
+		display: flex;
+		justify-content: space-around;
+	}
+	#footer .sponsors-list .spon-blurb {
+		text-align: center;
+	}
+	#footer .sponsors-list .spon-blurb:not(:last-child) {
+		margin-right: 0;
+	}
+	#footer .sponsors-list .spon-blurb img {
+		margin: 0 0 9px;
+		min-height: calc((((((100vw - 375px) * 100) / (768 - 375)) / 100) * (40 - 32)) + 32px);
+	}
+	#footer .sponsors-list .txt-area {
+		display: block;
+	}
+	#footer .sponsors-list .name {
+		display: none;
+	}
+	.footer-text {
+		font-size: 14px;
+	}
+	.laliga {
+		padding-bottom: 20px;
+	}
+	.saba-logo {
+		height: 32px;
+	}
+	/* #footer .sponsors-list .spon-blurb:not(:first-child) {
+		display: block;
+	} */
+}

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>M88</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+<link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.plugin.min.js"></script>
+<!-- <script type="text/javascript" src="assets/js/scroller.js"></script> -->
+<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+<script type="text/javascript" src="assets/js/papaparse.min.js"></script>
+</head>
+<body>
+<header id="header" onclick="hid__grp()">
+	<div class="inner-box">
+		<div class="row">
+			<div class="col col-1">
+				<a href="index.html">
+					<picture>
+					   <source srcset="assets/images/mlogo-mobile.svg" media="(max-width: 767px)">
+					   <source srcset="assets/images/mlogo-desktop.svg" media="(min-width: 768px)">
+					   <img srcset="assets/images/mlogo-desktop.svg" id="logo" />
+					</picture>
+				</a>
+			</div>
+			<div class="col col-2">
+				<a class="btn" role="button" onclick="openSearchRankPopup();">보유 추첨권 확인하기</a>
+				<div class="header__langs">
+					<div class="sel-lang"><img src="assets/images/flags/kr.svg"><small class="langs">한국어 (KRW)</small><span></span></div>
+					<ul>
+						<li class="option-hover"><img src="assets/images/flags/en.svg"><span class="spc-sm">English</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index.html">Malaysian Ringgit<br><small>(MYR)</small></a>
+								<a href="index-inr.html">Indian Rupee <small>(INR)</small></a>
+							</div>
+						</div>
+						<li class="option-hover"><img src="assets/images/flags/cn.svg"><span class="spc-sm">简体中文</span></li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index-cn.html">Chinese Yuan <small>(CNY)</small></a>
+								<a href="index-mycn.html">Malaysian Ringgit <br><small>(MYR)</small></a>
+							</div>
+						</div>
+						<li><a href="index-th.html"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
+						<li><a href="index-id.html"><img src="assets/images/flags/id.svg"><span>Bhs Indonesia <small>(IDR)</small></span></a></li>
+						<li><a href="index-vn.html"><img src="assets/images/flags/vn.svg"><span>Tiếng Việt <small>(VND)</small></span></a></li>
+						<li><a href="index-kr.html"><img src="assets/images/flags/kr.svg"><span>Korean <small>(KRW)</small></span></a></li>
+						<li><a href="index-jp.html"><img class="jpflag" src="assets/images/flags/jpy.svg"><span>Japanese <small>(USD)</small></span></a></li>
+					</ul>
+				</div>
+				<!-- <div class="lang-area">
+					<div class="sel-lang"><img src="assets/images/flags/en.svg"><span class="lang">English</span><span class="arrow"></span></div>
+					<ul>
+						<li><a href="index.html"><img src="assets/images/flags/en.svg"><span>English</span></a></li>
+						<li><a href="index.html?lang=th"><img src="assets/images/flags/th.svg"><span>ไทย <small>(THB)</small></span></a></li>
+						<li><a href="index-cn.html"><img src="assets/images/flags/cn.svg"><span>Chinese(MYR)</span></a></li>
+						<li><a href="index-id.html"><img src="assets/images/flags/id.svg"><span>Indonesian</span></a></li>
+						<li><a href="index-th.html"><img src="assets/images/flags/th.svg"><span>Thai</span></a></li>
+						<li><a href="index-vn.html"><img src="assets/images/flags/vn.svg"><span>Vietnamese</span></a></li>
+						<li><a href="index.html"><img src="assets/images/flags/en.svg"><span>English</span></a></li>
+						<li class="option-hover"><img src="assets/images/flags/cn.svg"><span class="spc-sm">简体中文</span>
+						</li>
+						<div class="cn-label">
+							<div class="option-block">
+								<a href="index.html?lang=cn">Chinese Yuan <small>(CNY)</small></a>
+								<a href="index.html?lang=my-cn">Malaysian Ringgit <br><small>(MYR)</small></a>
+							</div>
+						</div>
+						<li><a href="index.html?lang=id"><img src="assets/images/flags/id.svg"><span>Bhs Indonesia <small>(IDR)</small></span></a></li>
+						<li><a href="index.html?lang=vn"><img src="assets/images/flags/vn.svg"><span>Tiếng Việt <small>(VND)</small></span></a></li>
+					</ul>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" onclick="hid__grp()">
+	<div class="container">
+		<div class="coins">
+			<img class="coins-desk" src="assets/images/coins.png">
+			<img class="coins-mobi" src="assets/images/coins-mobi.png">
+		</div>
+		<div class="timer-container"></div>
+		<div class="inner-box inner-box-ledger">
+			<table class="ledger">
+				<caption>
+					<div class="row">
+						<div class="col col-1">
+							<div class="row"><span class="col col-1">E스포츠 월간 추첨</span></div>
+							<!-- <div class="row"><span class="col loi-krathong">잔여 추첨권 확인하기</span></div> -->
+							<span class="line"></span>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="promo-timer">
+							<span class="timer-label">잔여 프로모션 기간</span>
+							<div class="countdown">
+								<div class="num-row">
+									<div class="num-col col-days">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-hour">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-min">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+									<div class="num-col col-sec">
+										<div class="num-holder">
+											<div class="num-bg">0</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</caption>
+				<thead>
+					<tr>
+						<th><span>순위</span></th>
+						<th><span>아이디</span></th>
+						<th><span>추첨권 수량</span></th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			
+		</div>
+		<div class="wrap-show-more"><a role="button" class="btn-show-more"><strong data-less="SEE LESS">SEE MORE</strong></a></div>
+		<div class="inner-box">
+			<div class="accordion-box area-tnc">
+				<div class="accordion-parent"><strong><span>이용약관</span></strong></div>
+				<div class="accordion-content">
+					<ol>
+						<li>본 프로모션은 M88의 모든 회원 대상입니다.
+							<table>
+								<thead>
+									<tr>
+										<th>프로모션 기간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2023년 3월 1일 01:00 - 2024년 1월 1일 00:59</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>										
+						<li>프로모션 기간 동안 E스포츠에서 베팅한 회원은 월간 추첨에 참가하여 당첨 시 아래에 명시된 상품을 획득할 수 있습니다.				
+							<table>
+								<thead>
+									<tr>
+										<th>당첨자 수</th>
+										<th>상품</th>
+										<th>프리벳 보너스로 변경 시 보너스 금액<br>(롤오버 1배가 적용됩니다)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>RTX 3060 12GB 그래픽 카드	</td>
+										<td>277,425 </td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>탈론 팀과의 도타2 친선경기	</td>
+										<td>154,125 </td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>스틸시리즈 ARCTIS 1 무선 헤드셋	</td>
+										<td>61,650 </td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>50달러 상당의 스팀 기프트 카드	</td>
+										<td>30,825 </td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>탈론 팀 공식 유니폼	</td>
+										<td>12,330 </td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>10달러 상당의 게임 기프트 카드(스팀/라이엇/가레나)	</td>
+										<td>6,165 </td>
+									</tr>
+								</tbody>
+							</table>					
+						**추첨권 요구조건을 충족한 경우 다음 날 13:00 에 지급됩니다.<br><br>						
+						※ 상품 추첨권 획득 방법
+							<ul>		
+								<li>KRW 12,330 이상 입금할 때마다 1장의 추첨권을 획득할 수 있습니다.	</li>			
+								<li>E스포츠 상품의 롤오버 KRW 6,165당 1장의 추첨권을 획득할 수 있습니다.</li>				
+								<li>M88의 모든 상품의 롤오버 KRW 6,165당 1장의 추첨권을 획득할 수 있습니다.	</li>			
+								<li>1명의 지인을 추천할 때마다 5장의 추첨권을 획득할 수 있습니다. (추천한 지인이 신규 가입인 경우에만 적용됩니다.)</li>
+							</ul>			
+						</li>			
+						<li>회원은 프로모션 기간이 종료되기 전에 “신청하기”(로그인 후 활성화됩니다) 버튼을 클릭하고 양식을 제출해야 합니다. 프로모션 참여는 한 번만 신청할 수 있으며 프로모션 기간 동안에만 유효합니다. 신청 기한이 지난 프리벳 보너스는 지급되지 않습니다.	</li>			
+						<li>실제 현금으로 진행된 베팅 중 성공적으로 정산된 요건 충족 베팅만이 계산에 포함됩니다. 요구 사항 조건에 동점/무승부 경우의 계산이 포함된 경우를 제외한 모든 동점/무승부/환불/거절/무효/취소된 베팅 및 1.50 미만 소수점 배당률(말레이 0.5, 홍콩 0.5, 인도-2)의 베팅은 턴오버, 롤오버에 포함되지 않습니다.	</li>			
+						<li>프리벳 보너스는 E스포츠에서 1배 롤오버를 충족한 후 출금할 수 있습니다.	</li>			
+						<li>프리벳 보너스는 프로모션 기간 종료 후 5영업일 이내에 지급됩니다. 미 사용된 프리벳 보너스는 지급일로부터 5일 뒤 소멸됩니다.	</li>			
+						<li>프로모션 종료 후 행운의 당첨자에게는 온라인 고객센터로부터 개별적으로 연락이 갈 예정입니다. 연락이 되지 않을 시 당첨은 취소됩니다.	</li>			
+						<li>롤오버 요구 조건은 프리벳 보너스 금액이 지급된 후 7일 이내에 충족되어야 합니다. 그렇지 않을 경우 프리벳 보너스 및 당첨금이 취소됩니다.</li>				
+						<li><a class="link" href="https://www.m88.com/~/static/standalone-pages/promotions/terms-conditions.ko-KR" target="_blank">프로모션의 일반 이용약관이 적용됩니다.</a></li>		
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="inner-box">
+			<div class="footer-text">
+				<p>JADILAH YANG PALING ATAS!<br>Ingat, semakin tinggi peringkat, semakin besar hadiahnya!</p>
+			</div>
+		</div> -->
+	</div>
+</div>
+<footer id="footer">
+	<div class="row1-wrapper">
+		<div class="inner-box">
+			<div class="row-flex row-1">
+				<div class="sec sec-1">
+					<span class="po-label">Payment Options</span>
+					<div class="po-list">
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-quicktransfer-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-help2pay-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-paytrust-colored.svg" /></div>
+							</a>
+						</div>
+						<div class="img-box">
+							<a href="#">
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay.svg" /></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-ninepay-colored.svg" /></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="sec sec-3">
+					<div class="social-list">
+						<div class="img-box twitter-icon">
+							<a href="https://twitter.com/mym88mansion" target="_blank">
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-twitter-colored.svg"></div>
+							</a>
+						</div>
+						<div class="img-box youtube-icon">
+							<a href="https://www.youtube.com/channel/UCLQCeN8CVYye1DL2Xpq2IuA" target="_blank">
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube.svg"></div>
+								<div class="img-holder"><img src="assets/images/footer/icon-youtube-colored.svg"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner-box">
+		<div class="row-2 provider-list">
+			<div class="inner">
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-opus.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-opus-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-ag.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-ag-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-cq9-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-habanero-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-isoftbet-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-mgs-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-skywind-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-pragmatic-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img class="saba-logo" src="assets/images/footer/logo-sabasport.svg"></div>
+						<div class="img-holder"><img class="saba-logo" src="assets/images/footer/logo-sabasport-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playngo-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-lottoland-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-idnplay-colored.svg"></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-playtech-colored.svg"></div>
+					</div>
+				</div>
+				<!-- <div class="box">
+					<div class="img-box">
+						<div class="img-holder"><img src="assets/images/footer/logo-netent.svg"></div>
+						<div class="img-holder"><img src="assets/images/footer/logo-netent-colored.svg"></div>
+					</div>
+				</div> -->
+			</div>			
+		</div>
+
+	</div>
+	<div class=" row-flex row-3">
+		<div class="inner-box">
+			<div class="sec sec-1">
+				<div class="sponsors-list">
+					<div class="spon-blurb laliga">
+						<img src="assets/images/footer/icon-laliga.svg">
+						<div class="txt-area">
+							<div class="name white"><strong>Official Regional Partner</strong></div>
+							<div class="year white">2020 - 2024</div>
+						</div>
+					</div>
+					<div class="spon-blurb first-blurb">
+						<img src="assets/images/footer/icon-bournemouth.svg">
+						<div class="txt-area">
+							<div class="name"><strong>AFC Bournemouth</strong></div>
+							<div class="year">2016 - 2020</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-crystalpalace.svg">
+						<div class="txt-area">
+							<div class="name"><strong>Crystal Palace</strong></div>
+							<div class="year">2015 - 2017</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-manchester.svg">
+						<div class="txt-area">
+							<div class="name"><strong>Manchester City</strong></div>
+							<div class="year">2011 - 2012</div>
+						</div>
+					</div>
+					<div class="spon-blurb">
+						<img src="assets/images/footer/icon-tottenham.svg">
+						<div class="txt-area">
+							<div class="name"><strong>Tottenham Hotsours</strong></div>
+							<div class="year">2006 - 2010</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row4-wrapper">
+		<div class="inner-box">
+			<div class=" row-flex row-4">
+				<div class="sec sec-3">
+					<p>M88 is committed to supporting <a href="#" class="link">Responsible Gaming</a></p>
+				</div>
+				<!-- <div class="sec sec-2">
+					<div class="partners-list">
+						<img src="assets/images/footer/icon-ga.svg">
+						<img src="assets/images/footer/icon-itech.svg">
+					</div>
+				</div> -->
+				<div class="sec sec-4">
+					<img class="ga" src="assets/images/footer/ga.svg">
+					<img class="itech" src="assets/images/footer/itech.svg">
+					<img class="18" src="assets/images/footer/18.svg">
+					<span class="copyright">M88.com 2022</span>
+					<!-- <img class="copyright-icon" src="assets/images/footer/icon-copyright.svg"> -->
+				</div>
+			</div>
+			<div class="sec row-5">
+				<p>Terms and Conditions apply. Please refer to the promotions page for more details.</p>
+				<p>M88.com uses certain browser cookies to ensure you receive the best gaming experience. By accessing and continuing to use the site you accept the use of these cookies. For information on our use of cookies and how to prevent them please refer to M88´s  <strong> <u><a href="https://help.m88.com/termOfUse_tc_en.asp">terms of use</a></u></strong></p>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="area-popup popup-search-rank">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">close</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1">
+					<strong class="msg msg-default">보유 추첨권 확인하기</strong>
+					<strong class="msg msg-invalid">Hi <span class="un"></span></strong>
+				</div>
+				<div class="txt-2">
+					<div class="msg msg-default">아래의 검색창에 아이디를 입력하여 보유 추첨권을 확인 할 수 있습니다.</div>
+					<div class="msg msg-invalid">Unfortunately we cannot see your username.<br>
+					Or you may have search for a WRONG username.</div>
+				</div>
+				<form id="form" class="area-form" onsubmit="submitRankSearchForm(this);return false;">
+					<div class="field-area">
+						<label for="reg-name"><strong>아이디</strong></label>
+						<div class="field"><input type="text" name="un" data-required="true" /></div>
+					</div>
+					<button type="submit" role="button" class="btn">검색하기</button>
+					<div class="wrap-btn-cancel"><a role="button" class="btn-cancel" onclick="closePopup()"><strong>취소</strong></a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="area-popup popup-search-rank-result">
+	<div class="inner-box">
+		<div class="popup">
+			<div class="popup-head">
+				<div class="inner-box">
+					<a role="button" class="btn-close" onclick="closePopup()">close</a>
+				</div>
+			</div>
+			<div class="popup-content">
+				<div class="txt-1"><strong>현재 보유중인 추첨권은 <span class="highlight rank-result"></span> 장 입니다.</strong></div>
+				<a role="button" class="btn" onclick="closePopup()">CLOSE</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+</html>
