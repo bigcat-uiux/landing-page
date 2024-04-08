@@ -1,7 +1,7 @@
 const tncVN = /*html*/ `
 <li> Khuyến mãi áp dụng cho tất cả thành viên mới M88 Mansion từ ngày 09/04/2024 lúc 00:00 đến ngày 30/04/2024 lúc 23:59 (GMT+8). </li>
 <li> Thành viên mới cần có khoản gửi tiền đầu tiên và nhấn nút THAM GIA trong thời gian diễn ra khuyến mãi.</li>
-<li> Để hợp lệ nhận Hoàn tiền, thành viên mới cần cược tối thiểu 200 VND ở các giải đấu Italy Serie-A trong thời gian diễn ra khuyến mãi.</li>
+<li> Để hợp lệ nhận Hoàn tiền, thành viên mới cần cược tối thiểu 200 VND ở các giải đấu Cúp C1 Châu Âu trong thời gian diễn ra khuyến mãi. </li>
 <li> Cược đầu tiên là THUA, sẽ hợp lệ nhận hoàn tiền 100% lên đến 488 VND.</li>
 <li> Tiền thưởng sẽ được cập nhật thủ công vào tài khoản của thành viên vào thứ Hai hàng tuần sau khi đã xác nhận thành công khoản cược.</i>
 <li> Thưởng cần trải qua 8x vòng cược tại THỂ THAO trong vòng 7 ngày để tránh bị thu hồi tiền thưởng.</li>
