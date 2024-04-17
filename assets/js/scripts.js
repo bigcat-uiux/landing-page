@@ -165,6 +165,14 @@ var playerList = [];
 var path = window.location.href;
 var lang = path.slice(-7, -5);
 
+if (lang == "cn") {
+  if (path.slice(-9, -7) == "my") {
+    lang = "my";
+  } else {
+    lang = "cn";
+  }
+}
+
 if (
   !(
     lang == "cn" ||
