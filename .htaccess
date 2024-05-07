@@ -1,0 +1,21 @@
+#<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule (.*) /index.php/$1 [L]
+
+# RewriteRule ^$ maEN/ [L]
+RewriteRule ^$ /maEN [L]
+#RewriteRule ^(.*)$ /maEN/index.php [L]
+
+RewriteRule ^/maen$ maEN/ [L]
+RewriteRule ^/maid$ maID/ [L]
+RewriteRule ^/math$ maTH/ [L]
+RewriteRule ^/mavn$ maVN/ [L]
+RewriteRule ^/macn$ maCN/ [L]
+RewriteRule ^/makr$ maKR/ [L]
+RewriteRule ^/majp$ maJP/ [L]
+
+ErrorDocument 404 /maEN/index.php
+#</IfModule>
