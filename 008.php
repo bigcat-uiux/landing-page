@@ -4,8 +4,8 @@
 <main class="content">
 
   <?php include 'templates/banner.php'; ?>
-  
-  <?php include 'templates/tnc.php'; ?>
+
+  <?php include 'templates/008tnc.php'; ?>
 
 </main>
 
