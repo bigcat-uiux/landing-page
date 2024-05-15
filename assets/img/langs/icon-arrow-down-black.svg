@@ -1,0 +1,21 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 6" width="6" height="6">
+	<title>icon-arrow-down-white-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h6v6h-6z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #d3d4d7 } 
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#000000" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="Clip-Path" clip-path="url(#cp1)" filter="url(#f0)">
+		<g id="Layer">
+			<path id="Layer" class="s0" d="m0.3 1.2q0.1-0.1 0.2-0.1 0.1 0 0.2 0.1 0.1 0 0.2 0.1l2.1 2.2 2.1-2.2q0.1-0.1 0.2-0.1 0.1-0.1 0.2-0.1 0.1 0 0.2 0.1 0.1 0 0.1 0.1 0.1 0.1 0.2 0.2 0 0.1 0 0.2 0 0.1 0 0.2-0.1 0.1-0.2 0.2l-2.4 2.6c-0.2 0.2-0.6 0.2-0.8 0l-2.4-2.6q-0.1-0.1-0.2-0.2 0-0.1 0-0.2 0-0.1 0-0.2 0.1-0.1 0.2-0.2 0-0.1 0.1-0.1z"/>
+		</g>
+	</g>
+</svg>

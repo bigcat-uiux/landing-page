@@ -1,0 +1,133 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+  background-color: #000!important;
+}
+
+.prllx-bg {
+  background-image: url("../img/banner/005-banner-main.jpg");
+}
+
+.prllx-bg-006 {
+  background-image: url("../img/banner/bg-006.png");
+}
+
+.prllx-bg,
+.prllx-bg-006 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  height: 760px;
+  opacity: 1;
+}
+
+.banner__content {
+  width: 100%;
+  position: absolute;
+  top: 630px;
+  z-index: 20;
+  text-align: center;
+}
+
+.banner__content .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+}
+
+.flex--006-link {
+  display: flex; 
+  gap: 14px;
+}
+
+.tnc, .promo {
+  margin-top: unset;
+}
+
+@media (max-width: 1023px) {
+  .prllx-bg {
+    background-size: auto 100%;
+    height: min-height;
+    width: 100%;
+  }
+  .prllx-bg-006 {
+    background-size: contain;
+    height: min-height;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .prllx-bg-006 {
+    background-image: url("../img/banner/bg-006-mb.png");
+    background-size: cover;
+  }
+  .flex--006-link {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 559px) {
+  .prllx-bg,
+  .prllx-bg-006 {
+    background-size: cover;
+  }
+  .prllx-bg {
+    background-image: url("../img/banner/005-banner-mobi.jpg");
+  }
+  .prllx-bg-006 {
+    background-image: url("../img/banner/bg-006-mb.png");
+  }
+  .banner__content {
+    position: relative;
+    top: 390px;
+  }
+  .tnc, .promo {
+    margin-top: -150px;
+  }
+}
+
+@media (max-width: 470px) {
+  .prllx-bg,
+  .prllx-bg-006 {
+    background-size: contain;
+  }
+  .prllx-bg {
+    background-image: url("../img/banner/005-banner-mobi.jpg");
+  }
+  .prllx-bg-006 {
+    background-image: url("../img/banner/bg-006-mb.png");
+  }
+}
+
+@media (max-width: 375px) {
+  .prllx-bg,
+  .prllx-bg-006 {
+    background-size: 100%;
+  }
+  .prllx-bg {
+    background-image: url("../img/banner/005-banner-mobi.jpg");
+  }
+  .prllx-bg-006 {
+    background-image: url("../img/banner/bg-006-mb.png");
+  }
+
+  .banner__content {
+    position: relative;
+    top: 390px;
+  }
+
+  .tnc, .promo {
+    margin-top: -180px;
+  }
+}

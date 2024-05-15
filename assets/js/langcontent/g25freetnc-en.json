@@ -1,0 +1,30 @@
+{
+  "lang": "en-US",
+  "langs": "English",
+  "title": "M88 Mansion Esports | Where Asia Plays",
+
+  "register": "REGISTER",
+
+  "banner-h1": "M88 Mansion Esports<br> Where Asia Plays",
+
+  "join": "JOIN NOW",
+  "join-link": "https://record.sun988info.com/_KIygtkxEAq1eSeUTkJsCumNd7ZgqdRLk/1/",
+
+  "promos": "TERMS & CONDITIONS",
+
+  "discord-link": "https://discord.gg/M88esports",
+  "facebook-link": "https://facebook.com/m88esports",
+  "instagram-link": "https://instagram.com/m88esports",
+  "twitter-link": "https://twitter.com/m88esports",
+  "youtube-link": "https://www.youtube.com/channel/UCJ--uQjvxtUh21dT0H7sMKQ",
+  "twitch-link": "https://twitch.tv/m88esports",
+
+  "discord-img": "../assets/img/footer/discord.svg",
+  "facebook-img": "../assets/img/footer/facebook.svg",
+  "instagram-img": "../assets/img/footer/instagram.svg",
+  "twitter-img": "../assets/img/footer/twitter.svg",
+  "youtube-img": "../assets/img/footer/youtube.svg",
+  "twitch-img": "../assets/img/footer/twitch.svg",
+
+  "responsible": "M88sadsa is comited to supporting <a href='https://help.m88.com/responsible-gaming/responsibleGaming.en-US.asp' target='_blank'>Responsible Gambling</a>"
+}
