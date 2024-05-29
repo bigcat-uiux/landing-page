@@ -1,0 +1,45 @@
+aside {
+  position: relative;
+}
+@keyframes anim-glow {
+  from {
+    box-shadow: 0 0 2px -2px #4cc764;
+  }
+  to {
+    box-shadow: 0 0 10px 4px #4cc764;
+  }
+}
+.sticky-icon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.glow {
+  border-radius: 50%;
+  background-color: #4cc764;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  position: relative;
+  animation: anim-glow 1s infinite alternate;
+  margin-left: 35px;
+  margin-bottom: 130px;
+}
+
+/* most landing pages already have these rules */
+.social__media__icon {
+  /* display: block; */
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+}
+.social__media__icon--line {
+  background-size: 100px 100px;
+
+  /* change with svg path */
+  background-image: url(./line-widget.svg);
+
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
