@@ -1,0 +1,168 @@
+{
+  "langs": "简体中文",
+  "link-m88": "<a href=\"https://m88.com/?lang=zh-CN\"><img class=\"desk-header\" src=\"assets/images/mlogo-desktop_cn.svg\" alt=\"M88, LaLiga logos\"/><img class=\"mobi-header\" src=\"assets/images/mlogo-mobile.svg\" alt=\"M88, LaLiga logos\" /></a>",
+  "login": "LOGIN",
+  "join": "JOIN NOW",
+  "play": "PLAY NOW",
+  "claim-now": "立即开始",
+  "claim": "立即开始",
+
+  "claim-now-msports": "Ｍ体育",
+  "claim-now-casino": "老虎机",
+
+  "tnc": "花好月圆 玩转中秋",
+  "tnc2": "花好月圆 玩转中秋（注意事项）",
+  "tnc-betid": "极致畅玩 尊享返还",
+  "tile-btn": "现在走",
+
+  "title": "收件人资料",
+
+  "claim-now-default": "立即开始",
+
+  "ribbon-upcoming": "敬请期待",
+  "ribbon-ongoing": "进行中",
+  "ribbon-concluded": "已结束",
+
+  "activity-1": "活动一​",
+  "activity-2": "活动二​",
+  "activity-3": "活动三​",
+
+  "promo-period-1": "2023 年 09 月 18 日 00:00:00 – 2023 年 09 月 24 日 23:59:59",
+  "promo-period-2": "2023 年 09 月 25 日 00:00:00 – 2023 年 10 月 01 日 23:59:59",
+  "promo-period-3": "2023 年 10 月 02 日 00:00:00 – 2023 年 10 月 08 日 23:59:59",
+
+  "ends-in": "活动倒计时",
+
+  "days": "天",
+  "hours": "时",
+  "mins": "分",
+  "secs": "秒",
+
+  "txt1a": "花好月圆 玩转中秋",
+  "txt1b": "情满中秋 浓浓谜情",
+  "txt1c": "前 888 位回答 3 题并正确的会员，即可获得奖金！",
+
+  "txt2a": "花好月圆 玩转中秋",
+  "txt2b": "月下潮寻！玉兔 & 孔明灯在哪儿？",
+  "txt2c": "前 888 位回答正确的会员，即可获得奖金！",
+
+  "txt3a": "花好月圆 玩转中秋",
+  "txt3b": "团聚上城 连连中秋",
+  "txt3c": "前 888 位回答正确的会员，即可获得奖金！",
+
+  "label-m88username": "用户名",
+  "label-recipient-name": "收件人姓名",
+  "label-contact": "联络号码",
+  "label-address": "详细地址",
+  "label-postal": "邮政编码",
+  "label-answer1a": "梅花桩罗汉拳，两英争霸足坛圈（谜题：猜两位球员）",
+  "label-answer2a": "冰冷宫殿挂月上，月兔嫦娥窝居中（谜题：猜建筑名)",
+  "label-answer3a": "八戒西经思万千，奈何神女心属他（谜题：猜神女名）",
+
+  "label-answer1b": "图中有多少个玉兔",
+  "label-answer2b": "图中有多少个孔明灯",
+  "label-answer3b": "",
+
+  "label-answer1c": "请写出图中 3 个或以上的中秋节关键词",
+  "label-answer2c": "",
+  "label-answer3c": "",
+
+  "label-remark": "答案",
+
+  "pholder-m88username": "输入您的用户名",
+  "pholder-answer": "输入您的答案",
+
+  "pholder-m88username-betid": "请输入您的用户名",
+  "pholder-recipient-name": "请输入您的收件人姓名",
+  "pholder-contact": "请输入您的联络号码",
+  "pholder-address": "必填详细地址",
+  "pholder-postal": "必填邮政编码",
+
+  "pholder-remark": "备注仅可支持 150 个字",
+
+  "submitted": "提交成功",
+
+  "participated": "您已经回答了，谢谢您的参与。",
+  "submit": "提交",
+
+  "success-head": "提交成功",
+  "success-content-head": "提交成功",
+  "success-msg": "首 888 位回答正确，并在活动期间存款至少 100 元的会员，将会在下周三 20:00 之前派发。",
+
+  "btn-ok": "好",
+
+  "mg1-result-head": "以下是 情满中秋 浓浓谜情 的正确答案",
+  "result-answer1a": "梅西 和 C罗​​​",
+  "result-answer2a": "广寒宫​​",
+  "result-answer3a": "嫦娥",
+
+  "mg2-result-head": "以下是 月下潮寻！玉兔 & 孔明灯在哪儿？ 的正确答案",
+  "result-answer1b": "8",
+  "result-answer2b": "8",
+
+  "mg3-result-head": "以下是 团聚上城 连连中秋 的正确答案",
+  "result-answer1c": "玉兔，月饼，后羿，嫦娥，中秋节，赏月",
+
+  "slides-head": "明陞M88采用最好及最新的安全和加密技术，确保玩家的账户和信息不会受到破坏者和黑客的攻击。",
+  "m88-head": "为什么选择 M88 大厦？",
+  "m88-feat-head1": "安全可靠的游戏",
+  "m88-feat-txt1": "明陞M88采用最好及最新的安全和加密技术，确保玩家的账户和信息不会受到破坏者和黑客的攻击。",
+  "m88-feat-head2": "各种游戏",
+  "m88-feat-txt2": "明陞M88提供来自领先开发商和经销商的各种游戏，可以满足玩家各式各样的娱乐类型。",
+  "m88-feat-head3": "快速和更好的体验",
+  "m88-feat-txt3": "明陞M88简化了网站，使游戏和页面加载速度更快，这样玩家不会在兴奋之余破坏了您的游戏体验。",
+  "m88-feat-head4": "优化外观和感受",
+  "m88-feat-txt4": "我们整体优惠了网站，除了使得网站更快速之于，还大大的编辑网站页面，相信会使您有更棒的游戏体验。",
+
+  "bottom-head": "立即开始您的明陞M88旅程",
+  "bottom-head-sub-about": "关于明陞M88",
+  "bottom-txt1": "明陞M88是行业领先的在线游戏平台，为亚洲市场提供体育博彩、真人娱乐场、老虎机、彩票等。成立于 2007 年，我们以在安全、公平和值得信赖的环境中为客户提供最佳游戏体验而自豪。",
+  "bottom-txt2": "每个月提供满满的活动与彩金，提供卓越的价值和无与伦比的服务。创新是我们业务的核心，因为我们不断寻求开发新技术、改善用户体验并扩大我们的游戏组合。",
+  "bottom-head-sub2": "明陞M88是西甲官方亚洲合作伙伴",
+  "bottom-txt3": "明陞M88一直以来与世界上最大的足球品牌合作，与西甲建立独家合作伙伴关系，直到 2023-24 赛季成为亚洲官方区域投注合作伙伴。双方优质的品牌，持续合作扩大彼此的影响力，未来将会提供更多的优质服务，敬请期待",
+
+  "to-top": "回到顶部",
+
+  "facebook": "",
+  "instagram": "https://www.instagram.com/m88.cn/",
+  "twitter": "",
+  "youtube": "",
+  "tiktok": "https://v.douyin.com/Lwa93nM/",
+
+  "tiles-head": "明陞M88-您最佳的游戏平台",
+  "tiles-desc": "明陞M88提供您最完善的娱乐及投注平台，立即发挥您的好运气吧！",
+
+  "sports": "体育",
+  "sports-txt": "我们有您最喜爱的大型赛事和比赛，并提供最新和最佳的赔率。",
+  "live-casino": "真人娱乐城",
+  "live-casino-txt": "明陞M88亲切又专业的荷官，让您身临其境实体娱乐城的感受。",
+  "casino-fishing": "娱乐城/捕鱼游戏",
+  "casino-fishing-txt": "专业稳定的平台，游戏当中不会产生延迟或卡顿的画面。",
+  "keno-lotto": "快乐彩和彩票",
+  "keno-lotto-txt": "大奖随时等着您，享受快乐彩和彩票就到明陞M88。",
+
+  "title-sponsors": "合作伙伴",
+  "prev-sponsors": "前合作伙伴",
+  "footer-laliga": "官方区域合作伙伴",
+  "footer-bwf": "官方投注合作伙伴",
+  "footer-ac": "官方合作伙伴",
+  "footer-talon": "全球冠名赞助商",
+  "footer-celeb": "M88 名人合作伙伴",
+  "footer-ambassador": "M88大使",
+  "footer-betting": "主要赞助商",
+
+  "ftxt1": "官方区域合作伙伴",
+  "ftxt1a": "2020 - 2024",
+  "ftxt2": "伯恩茅斯足球队",
+  "ftxt2a": "2015 - 2020",
+  "ftxt3": "水晶宫",
+  "ftxt3a": "2015 - 2017",
+  "ftxt4": "曼切斯特城",
+  "ftxt4a": "2011 - 2012",
+  "ftxt5": "Tottemham Hotspurs",
+  "ftxt5a": "2006 - 2010",
+
+  "ftxt6": "M88.com一直致力支持<a href=\"https://help.m88.com/responsibleGaming_cs.asp\" target=\"_blank\" class=\"link\"><strong>责任博彩</strong></a>",
+  "ftxt7": "条款和规则， 请参阅活动页面了解更多详情。",
+  "ftxt8": "为提供您个人化且即时的服务，本网站透过使用\"Cookies\"记录与存取您的浏览使用讯息，继续使用网站，即表明您同意 cookie 及其他类似技术的使用。<br>有关我们使用 cookie 以及如何防止它们的信息，请参阅明陞M88 的<a href=\"https://help.m88.com/termOfUse_tc_cs.asp\" target=\"_blank\"><strong>使用条款</strong></a>。"
+}
